@@ -8,10 +8,10 @@ const Splash = () => {
             <Image src="/assets/icons/BaseWeightMascot.svg" height={200} width={200} alt="Home"/>
           </div>
           <div className="flex justify-center items-center">
-            <span className="self-center text-6xl font-semibold whitespace-nowrap dark:text-white">BaseWeight</span>
+            <span className="self-center text-6xl font-semibold whitespace-nowrap ">BaseWeight</span>
           </div>
           <div className="flex justify-center items-center">
-            <span className="self-center font-semibold whitespace-nowrap dark:text-white">(Full site coming soon)</span>
+            <span className="self-center font-semibold whitespace-nowrap ">(Full site coming soon)</span>
           </div>
       </div>      
     </section>
