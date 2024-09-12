@@ -1,5 +1,7 @@
 import './globals.css';
 
+import { Analytics } from "@vercel/analytics/react"
+
 export const metadata = {
   title: 'BaseWeight Solutions',
   description: 'Take only what you need',
