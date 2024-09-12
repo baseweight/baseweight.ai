@@ -2,30 +2,46 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Header />
 
-      <main className="relative flex flex-col items-center justify-center h-screen bg-gray-50">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/hero.jpg" // Reference to the image in the public folder
-            alt="Mountain landscape"
-            layout="fill" // This makes the image cover the entire div
-            objectFit="cover" // Ensures the image covers the whole area without distortion
-            className="opacity-80" // Add opacity to make the text stand out
-          />
-        </div>
+      <main className="bg-gray-50 py-16 px-8">
+        <section className="text-center max-w-4xl mx-auto mb-16">
+          <h1 className="text-5xl font-bold mb-6">About BaseWeight</h1>
+          <p className="text-lg text-gray-700">
+            BaseWeight is a leading software consultancy that helps businesses scale their operations with cloud-native solutions and cutting-edge software architectures. 
+            Our mission is to empower businesses with the tools and expertise needed to thrive in an ever-evolving digital landscape.
+          </p>
+        </section>
 
-        {/* Content on top of the background */}
-        <section className="relative z-10 text-center justify-center">
-      	  <Image src="/BaseWeightMascotWhite.svg" alt="BaseWeight Logo" width={200} height={200} />
-          <h1 className="text-5xl font-bold mb-6 text-white">Only the Essentials</h1>
-          <a href="#contact" className="inline-block bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 mb-8">
-            Learn More
-          </a>
+        {/* Mission Section */}
+        <section className="max-w-5xl mx-auto text-center bg-white shadow-lg rounded-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+          <p className="text-lg text-gray-700">
+            At BaseWeight, our mission is simple: to help businesses unlock their full potential through scalable, reliable, and efficient technology solutions. 
+            We believe in providing personalized solutions to meet each business’s unique challenges, and we are committed to delivering results that help companies grow.
+          </p>
+        </section>
+
+        {/* Team Section */}
+        <section className="max-w-5xl mx-auto text-center bg-white shadow-lg rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-4">Meet the Team</h2>
+          <div className="flex flex-wrap justify-center gap-8">
+            {/* Example Team Member */}
+            <div className="w-full md:w-1/3">
+              <Image
+                src="/team-member-3.jpg"
+                alt="Team member"
+                width={200}
+                height={200}
+                className="rounded-full mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold">Joe Bowser</h3>
+              <p className="text-gray-700">Founder</p>
+            </div>
+          </div>
         </section>
       </main>
 
