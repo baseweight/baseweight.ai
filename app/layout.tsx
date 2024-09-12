@@ -1,6 +1,6 @@
 import './globals.css';
 
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'BaseWeight Solutions',
@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 
-export default function RootLayout({ children } : { children: React.ReactNode types: React.ReactNode}) {
+export default function RootLayout({ children } : { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-gray-50 text-gray-900">
