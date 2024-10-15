@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import sendgrid from '@sendgrid/mail';
 
 
@@ -12,13 +11,15 @@ interface ContactForm {
   message: string;
 }
 
-export async function POST(req: NextApiRequest) {
-    
-    const { name, email, subject, message }: ContactForm = req.body;
+export async function POST(req: NextRequest) {
+
+    const body = await req.json();
+    const { name, email, subject, message }: ContactForm = body;
 
     var res = NextResponse.next();
 
     try {
+
       await sendgrid.send({
         to: 'info@baseweight.ai', // Replace with your email address
         from: 'info@baseweight.ai', // Must match the verified sender from SendGrid
