@@ -1,42 +1,7 @@
-import React, { FormEvent, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      // Handle success (e.g., show a success message or reset form)
-      console.log('Message sent successfully');
-    } else {
-      // Handle error (e.g., show error message)
-      console.error('Error sending message');
-    }
-  };
-
+export default function Contact() {
   return (
     <>
       <Header />
@@ -49,7 +14,7 @@ const Contact: React.FC = () => {
           </p>
 
           {/* Contact Form */}
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6">
             {/* Name */}
             <div>
               <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
@@ -59,8 +24,6 @@ const Contact: React.FC = () => {
                 name="name"
                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
-                value={formData.name}
-                onChange={handleChange}
               />
             </div>
 
@@ -73,8 +36,6 @@ const Contact: React.FC = () => {
                 name="email"
                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
-                value={formData.email}
-                onChange={handleChange}
               />
             </div>
 
@@ -87,8 +48,6 @@ const Contact: React.FC = () => {
                 name="subject"
                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
-                value={formData.subject}
-                onChange={handleChange}
               />
             </div>
 
@@ -98,11 +57,9 @@ const Contact: React.FC = () => {
               <textarea
                 id="message"
                 name="message"
-                rows={4}
+                rows="4"
                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
-                value={formData.message}
-                onChange={handleChange}
               ></textarea>
             </div>
 
@@ -122,6 +79,4 @@ const Contact: React.FC = () => {
       <Footer />
     </>
   );
-};
-
-export default Contact;
+}
