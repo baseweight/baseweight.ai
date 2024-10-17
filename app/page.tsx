@@ -27,8 +27,8 @@ export default function Home() {
             Software that can go where you go.
           </h3>
 
-          <a href="/about" className="inline-block bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 mb-8">
-            Learn More
+          <a href="/contact" className="inline-block bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 mb-8">
+            Contact Us
           </a>
         </section>
       </main>
