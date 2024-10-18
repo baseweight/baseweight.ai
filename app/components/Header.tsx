@@ -9,6 +9,7 @@ export default function Header() {
       </Link>
       <nav>
         <ul className="flex space-x-8">
+          <li><Link href="/daypack" className="text-lg font-semibold hover:text-blue-600">Contact</Link></li>
           <li><Link href="/contact" className="text-lg font-semibold hover:text-blue-600">Contact</Link></li>
         </ul>
       </nav>
