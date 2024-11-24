@@ -1,6 +1,7 @@
 import './globals.css';
+  
+import { GoogleAnalytics } from '@next/third-parties/google'
 
-import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'BaseWeight Solutions',
@@ -13,7 +14,7 @@ export default function RootLayout({ children } : { children: React.ReactNode })
     <html lang="en">
       <body className="bg-gray-50 text-gray-900">
         {children}
-	<Analytics />
+  <GoogleAnalytics gaId="G-3SLFQ0T7E1" />
       </body>
     </html>
   );
