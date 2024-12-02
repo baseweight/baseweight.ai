@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MailchimpSubscribe from './components/MailChimpSubscribe';
+
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
           <h3 className="text-2xl max-w-3xl mb-6 text-white">
             Software that can go where you go.
           </h3>
+
+          <MailchimpSubscribe />
 
           <a href="/contact" className="inline-block bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 mb-8">
             Contact Us

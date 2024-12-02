@@ -1,39 +1,128 @@
-import Image from 'next/image';
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export default function Home() {
-  return (
-    <>
-      <Header />
+export default function DayPack() {
+    return (
+        <>
+            <Header />
+            <main className="bg-gray-50 min-h-screen">
+                {/* Hero Section */}
+                <section className="relative bg-blue-500 text-white py-16 px-8">
+                    <div className="max-w-5xl mx-auto text-center">
+                    <h1 className="text-4xl font-bold mb-4">
+                        Revolutionize AI Accessibility with Our Local LLM Server App
+                    </h1>
+                    <p className="text-lg mb-6">
+                        Your phone becomes a powerful AI hub, hosting a local LLM that can be accessed seamlessly from any device on your network.
+                    </p>
+                    <a
+                        href="#features"
+                        className="inline-block bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition"
+                    >
+                        Learn More
+                    </a>
+                    </div>
+                </section>
 
-      <main className="relative flex flex-col items-center justify-center h-screen bg-gray-50">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/hero.jpg" // Reference to the image in the public folder
-            alt="Mountain landscape"
-            layout="fill" // This makes the image cover the entire div
-            objectFit="cover" // Ensures the image covers the whole area without distortion
-            className="opacity-80" // Add opacity to make the text stand out
-          />
-        </div>
+                {/* Features Section */}
+                <section id="features" className="py-16 px-8">
+                    <div className="max-w-5xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold mb-8">Key Features</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Feature 1 */}
+                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Local AI Hosting</h3>
+                        <p className="text-gray-700">
+                            Run a fully functional LLM server directly on your mobile device, eliminating dependency on cloud services and ensuring your data stays private.
+                        </p>
+                        </div>
+                        {/* Feature 2 */}
+                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Access Anywhere</h3>
+                        <p className="text-gray-700">
+                            Access the AI locally on your phone or from any device (laptop, desktop) using your phone’s IP address.
+                        </p>
+                        </div>
+                        {/* Feature 3 */}
+                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Seamless Integration</h3>
+                        <p className="text-gray-700">
+                            Easily connect the server with desktop or web applications for real-time AI interactions and processing.
+                        </p>
+                        </div>
+                        {/* Feature 4 */}
+                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Optimized for Mobile</h3>
+                        <p className="text-gray-700">
+                            Designed to leverage the power of modern mobile processors without compromising battery life or performance.
+                        </p>
+                        </div>
+                        {/* Feature 5 */}
+                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Privacy First</h3>
+                        <p className="text-gray-700">
+                            Your data never leaves your device, ensuring absolute privacy and compliance with sensitive use cases.
+                        </p>
+                        </div>
+                        {/* Feature 6 */}
+                        <div className="bg-white shadow-lg rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Open-Source Friendly</h3>
+                        <p className="text-gray-700">
+                            Build on an open-source architecture that encourages customization and community-driven enhancements.
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
 
-        {/* Content on top of the background */}
-        <section className="relative z-10 text-center justify-center">
-          <h1 className="text-5xl font-bold mb-6 text-white">BaseWeight DayPack</h1>
-          <h3 className="text-2xl max-w-3xl mb-6 text-white">
-            Develop apps quickly
-          </h3>
+                {/* Call to Action */}
+                <section className="bg-gray-100 py-16 px-8">
+                    <div className="max-w-3xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold mb-4">Ready to Experience AI Like Never Before?</h2>
+                    <p className="text-lg mb-8">
+                        Download our app today and transform your phone into a powerful AI server, accessible from anywhere on your network.
+                    </p>
+                    <a
+                        href="/download"
+                        className="inline-block bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition"
+                    >
+                        Download Now
+                    </a>
+                    </div>
+                </section>
 
-          <a href="/contact" className="inline-block bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 mb-8">
-            Contact Us
-          </a>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+                {/* FAQ Section */}
+                <section className="py-16 px-8">
+                    <div className="max-w-5xl mx-auto">
+                    <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                    <div className="space-y-6">
+                        {/* Question 1 */}
+                        <div>
+                        <h3 className="text-xl font-semibold mb-2">How does the Local LLM work?</h3>
+                        <p className="text-gray-700">
+                            The app runs a lightweight LLM server on your mobile device, enabling AI queries directly from the device or over the local network using your phone's IP address.
+                        </p>
+                        </div>
+                        {/* Question 2 */}
+                        <div>
+                        <h3 className="text-xl font-semibold mb-2">What devices are supported?</h3>
+                        <p className="text-gray-700">
+                            The app is optimized for Android and iOS devices with modern hardware capable of running AI models efficiently.
+                        </p>
+                        </div>
+                        {/* Question 3 */}
+                        <div>
+                        <h3 className="text-xl font-semibold mb-2">Is my data secure?</h3>
+                        <p className="text-gray-700">
+                            Yes. All computations and data processing occur locally on your device, ensuring your data remains private and secure.
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </>
   );
-}
-
+};
