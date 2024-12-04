@@ -12,11 +12,11 @@ export default function DayPack() {
                 <section className="relative bg-slate-700 text-white py-16 px-8">
                     <div className="max-w-5xl mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-4">
-                        DayPack: Deploy any model OnDevice
+                        DayPack: Deploy and test models OnDevice
                     </h1>
                     <p className="text-lg mb-6">
-                        Your phone becomes a powerful AI hub, capable of hosting not only Local LLMs, but any model that can be accessed
-                        from any device on your network.
+                        Transform your phone into a testbed of AI development.  With DayPack, your device can evaluate ML model performance
+                        like never before.  
                     </p>
                     <a
                         href="#features"
@@ -48,9 +48,10 @@ export default function DayPack() {
                         </div>
                         {/* Feature 3 */}
                         <div className="bg-white shadow-lg rounded-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Seamless Integration</h3>
+                        <h3 className="text-xl font-semibold mb-4">Rapid Testing</h3>
                         <p className="text-gray-700">
-                            Easily connect the server with desktop or web applications for real-time AI interactions and processing.
+                            Run your LLM models directly after export using the existing API endpoints and never have to leave your 
+                            Python development
                         </p>
                         </div>
                         {/* Feature 4 */}
@@ -98,28 +99,17 @@ export default function DayPack() {
                         <div>
                         <h3 className="text-xl font-semibold mb-2">How does DayPack work?</h3>
                         <p className="text-gray-700">
-                            DayPack runs a server on the device, and utilizes Open Source OnDevice inference frameworks such as Executorch 
-                            to run the models on the device.
+                            DayPack runs a server on the device, and utilizes OnDevice inference frameworks to run the models
                         </p>
                         </div>
                         {/* Question 2 */}
                         <div>
                         <h3 className="text-xl font-semibold mb-2">What devices are supported?</h3>
                         <p className="text-gray-700">
-                            The application runs best on iPhone 15 or above, and on Qualcomm Snapdragon Gen 2 devices and Mediatek devices.
+                            DayPack supports CoreML on iOS and Executorch on Android
                         </p>
                         </div>
-                        {/* Question 3 */}
-                        <div>
-                        <h3 className="text-xl font-semibold mb-2">Is my data secure?</h3>
-                        <p className="text-gray-700">
-                            Yes. All computations and data processing occur locally on your device, ensuring your data remains private and secure.
-                        </p>
-                        <h3 className="text-xl font-semibold mb-2">Why Executorch?</h3>
-                        <p className="text-gray-700">
-                            Please read this blog post about the decisions made when developing DayPack.
-                        </p>
-                        </div>
+                        
                     </div>
                     </div>
                 </section>
