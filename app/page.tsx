@@ -21,9 +21,9 @@ export default function Home() {
           />
         </div>
       {/* Container for the split layout */}
-      <div className="z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-lg bg-opacity-20 overflow-hidden">
         {/* Left Side: Logo and Branding */}
-        <div className="flex flex-col items-center justify-center bg-blue-500 text-white p-8">
+        <div className="flex flex-col items-center justify-center bg-slate-800 bg-opacity-60 text-white p-8">
           <Image
             src="/BaseWeightMascotWhite.svg" // Update with the path to your logo
             alt="BaseWeight"
@@ -38,11 +38,11 @@ export default function Home() {
         </div>
 
         {/* Right Side: Blurb About the Product */}
-        <div className="p-8 flex flex-col justify-center">
-          <h2 className="text-2xl font-bold mb-4">Transform Your Phone into an AI Powerhouse</h2>
-          <p className="text-gray-700 mb-6">
-            Our innovative mobile app turns your device into a powerful AI hub, hosting a local LLM (Large Language Model) that can run directly on your phone. 
-            Access the AI from your mobile device or any computer on your network using your phone’s IP address. Your data stays secure, private, and local.
+        <div className="p-8 flex flex-col justify-center bg-white">
+          <h2 className="text-2xl font-bold mb-4">Tools and Services and Local AI </h2>
+          <p className="mb-6">
+            Our innovative tools and technologies allow you to leverage our combined ten years of professional 
+            experience building Local AI.
           </p>
           <a
             href="/daypack"

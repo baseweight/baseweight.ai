@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import MailchimpSubscribe from '../components/MailChimpSubscribe';
 
 export default function DayPack() {
     return (
@@ -8,7 +9,7 @@ export default function DayPack() {
             <Header />
             <main className="bg-gray-50 min-h-screen">
                 {/* Hero Section */}
-                <section className="relative bg-blue-500 text-white py-16 px-8">
+                <section className="relative bg-slate-700 text-white py-16 px-8">
                     <div className="max-w-5xl mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-4">
                         DayPack: Deploy any model OnDevice
@@ -82,14 +83,9 @@ export default function DayPack() {
                     <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-4">Ready to Experience AI Like Never Before?</h2>
                     <p className="text-lg mb-8">
-                        Download our app today and transform your phone into a powerful AI server, accessible from anywhere on your network.
+                        Sign up to to get updates related to DayPack and other new products currently in development
                     </p>
-                    <a
-                        href="/download"
-                        className="inline-block bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition"
-                    >
-                        Download Now
-                    </a>
+                    <MailchimpSubscribe />
                     </div>
                 </section>
 
