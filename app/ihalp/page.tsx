@@ -16,7 +16,6 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-6 w-full max-w-6xl">
           {/* Base Bear */}
           <Bear />
-
           {/* Text Content */}
           <div className="flex flex-col items-start gap-4 max-w-3xl">
             <h3 className="text-2xl font-bold">

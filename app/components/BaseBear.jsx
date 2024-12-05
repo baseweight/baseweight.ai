@@ -68,6 +68,9 @@ export default function Basebear() {
             <h2 className="c-poster__sub-title">ml on the edge</h2>
           </footer>
         </div>
+        <div className="flex flex-col items-start gap-4 max-w-3xl">
+          <p> if I had a dollar for every fucking column error I get in this bloody crap.</p>
+        </div>
       </section>
     </div>
   );
