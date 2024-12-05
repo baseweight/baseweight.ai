@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Yap from './YapYapYap';
 
 export default function Basebear() {
   return (
@@ -67,10 +68,12 @@ export default function Basebear() {
             <h1 className="c-poster__title">Baseweight.ai</h1>
             <h2 className="c-poster__sub-title">ml on the edge</h2>
           </footer>
+        <div className="hey stuffflex flex-col items-start gap-4 max-w-3xl">
+          <Yap />
+          <Yap />
+          <Yap />
         </div>
-        <div className="flex flex-col items-start gap-4 max-w-3xl">
-          <p> if I had a dollar for every fucking column error I get in this bloody crap.</p>
-        </div>
+      </div>
       </section>
     </div>
   );

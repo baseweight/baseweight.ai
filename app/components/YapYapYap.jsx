@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function YapYapYap() {
   return (
-    <p>
+    <p className="flex flex-grow">
       A backpacker's life is one of adventure, Where each day brings new discoveries. From the mountains to the
       sea, You'll find beauty in each place you see.
       <br />

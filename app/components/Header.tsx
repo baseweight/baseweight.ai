@@ -1,11 +1,11 @@
-import '../globals.css';
+import '../baseweight.css';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center p-4 bg-white shadow-sm">
+    <header className="flex justify-between items-center p-4 background-color shadow-sm">
       <Link href="/">
       <Image src="/BaseWeightMascot.svg" alt="BaseWeight Logo" width={50} height={25} />
       </Link>

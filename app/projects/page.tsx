@@ -7,7 +7,7 @@ export default function Projects() {
     <>
       <Header />
 
-      <main className="bg-gray-50 py-16 px-8">
+      <main className="bg-background text-foreground py-16 px-8">
 
         <section className="text-center max-w-4xl mx-auto mb-16">
         <h2 className="text-3xl font-bold mb-4">DayPack</h2>
