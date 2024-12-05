@@ -35,24 +35,12 @@ body {
   }
 }
 
-BODY {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align content at the top */
-  margin: 10px 0 40px; /* 10px at top and 40px at bottom */
-  padding: 0 3%; /* 3% padding on left and right */
-  overflow-y: auto; /* Enable scrolling for content */
-  color: rgb(58, 61, 64);
-  /* background-color: rgb(240, 240, 240);*/
-  background: rgb(80, 83, 51);
-}
-
 .hey {
   position: relative;
   margin-top: 2em; /* Add spacing below .basebear */
   width: 500px;
   padding: 0;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   color: rgb(253, 220, 196);
   text-align: left;
