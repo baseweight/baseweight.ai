@@ -38,7 +38,7 @@ export default function About() {
             </div>
             {/* Value 2 */}
             <div className="bg-white shadow-md rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">Integrity</h3>
+              <h3 className="text-xl font-semibold mb-2">Sustainability</h3>
               <p className="text-gray-700">
                 We are committed to ethical practices and prioritize transparency in all our client relationships.
               </p>
