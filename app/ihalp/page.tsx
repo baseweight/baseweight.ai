@@ -1,7 +1,6 @@
 import '../baseweight.css';
 import React from 'react';
 import Link from 'next/link';
-import BazonkaHeader from '../components/BazonkaHeader';
 import Header from '../components/Header';
 import Bear from '../components/BaseBear';
 import Yap from '../components/YapYapYap';

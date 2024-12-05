@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="relative flex flex-col items-center justify-center h-screen bg-gray-50">
+      <main className="relative flex flex-col items-center justify-center h-screen bg-">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
