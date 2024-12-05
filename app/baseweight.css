@@ -1,0 +1,578 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: 'Garda Black';
+  src: local('Garda Black'), url(./fonts/Gardablack.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'National Park';
+  src: local('National Park Variable'), url(./fonts/NationalPark-VariableVF.woff) format('woff2');
+}
+
+
+HTML {
+  /*using system font-stack*/
+  font-family: 'Garda Black', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 115%; /*~18px*/
+/*   font-size: calc(16px + (30 - 16) * (100vw - 300px) / (1300 - 300) ); */
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+BODY {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content at the top */
+  margin: 10px 0 40px; /* 10px at top and 40px at bottom */
+  padding: 0 3%; /* 3% padding on left and right */
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable scrolling for content */
+  color: rgb(58, 61, 64);
+  /* background-color: rgb(240, 240, 240);*/
+  background: rgb(80, 83, 51);
+}
+
+.hey {
+  position: relative;
+  margin-top: 2em; /* Add spacing below .basebear */
+  width: 500px;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(253, 220, 196);
+  text-align: left;
+  font-family: 'National Park Variable', 'National Park', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  color: inherit;
+}
+
+.basebear {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  min-height: calc(100vh - 50px);
+  background: rgb(80, 83, 51);
+}
+
+/*Actual Style*/
+.c-canvas {
+  position: relative; /* Changed from absolute */
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vh - 50px);
+  padding-bottom: 2.5em;
+  background: rgb(253, 220, 196);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/*image noise*/
+.c-canvas::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+/*   background-image: url(https://farm5.staticflickr.com/4829/31443305887_88c76f5027_o.jpg);
+  mix-blend-mode: luminosity; */ background-image: url(../public/thanks_dr_perlin.png);
+  mix-blend-mode: hard-light;
+/*   mix-blend-mode: hard-light;
+  mix-blend-mode: overlay;
+  mix-blend-mode: screen; */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.c-poster {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 6em auto 0 auto;
+  width: 605px;
+  height: 515px;
+  background: rgb(253, 220, 196);
+}
+
+.c-poster__main {
+  position: relative;
+  min-height: 380px;
+/*  background: rgba(190, 90, 150, .2) */
+}
+
+/*  BEAR
+=======================*/
+/*
+1. left was calculated according to the formula:
+(100% - width[in percentages]) / 2 = left; -> (100 - 48) / 2 = 26%;
+*/
+.o-bear {
+  position: absolute;
+  left: 26%; /*[1]*/
+  top: 0%;
+  width: 290px;
+  min-height: 380px;
+/*   outline: 1px solid; */
+}
+
+/*
+  1. Hack. By defining color the same value as background-color,
+we can use currentColor variable on the child elements as a variable
+to set background-color property on them to the same value as the main background-color.
+Note using this hack we should not define any text or use color on the main element otherwise
+text will get this value as it's text color.
+*/
+.o-bear__head {
+  position: absolute;
+  left: calc((100% - 85%) / 2);
+  top: 8%;
+  background: rgb(28, 24, 41);
+  color: rgb(28, 24, 41); /*[1]*/
+  width: 85%;
+  height: 65%;
+  border-radius: 55% 55% 0 0 / 40% 40% 0 0;
+  z-index: 0;
+}
+
+.o-bear__ears {
+  position: absolute;
+  top: -8%;
+  width: 100%;
+  min-height: 70px;
+/*   outline: 1px solid; */
+}
+
+.o-bear__ear {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+
+.o-bear__ear--left {
+
+}
+
+.o-bear__ear--right {
+  right: 0;
+}
+
+/*
+  1. Hack. By defining color the same value as background-color,
+we can use currentColor variable on the child elements as a variable
+to set background-color property on them to the same value as the main background-color.
+Note using this hack we should not define any text or use color on the main element otherwise
+text will get this value as it's text color.
+*/
+.o-bear__face {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 60%;
+  color: rgb(216, 133, 104); /*[1]*/
+/*   outline: 1px solid white; */
+}
+
+.o-bear__eyes {
+  position: absolute;
+  width: 100%;
+  min-height: 15px;
+/*   outline: 1px solid red; */
+}
+
+.o-bear__eye {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: currentcolor;
+}
+
+.o-bear__eye--left {
+  left: 20%;
+}
+
+
+.o-bear__eye--right {
+  right: 20%;
+}
+
+/*
+1. left was calculated according to the formula:
+(100% - width[in percentages]) / 2 = left; -> (100 - 28.5) / 2 = 71.5%;
+*/
+.o-bear__nose {
+  position: absolute;
+  top: 1%;
+  left: calc((100% - 27%) / 2);
+  width: 67px;
+  height: 120px;
+  border-radius: 90% 90% 0 0 / 55% 55% 0 0;
+  background: currentcolor;
+}
+
+.o-bear__nose::before,
+.o-bear__nose::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border: 10px solid currentcolor;
+  border-top-color: transparent;
+  border-bottom-width: 95px;
+}
+
+.o-bear__nose::before {
+  left: -9px;
+  border-left-color: transparent;
+  border-right-width: 0px;
+}
+
+.o-bear__nose::after {
+  right: -9px;
+  border-right-color: transparent;
+  border-left-width: 0px;
+}
+
+/*
+1. left was calculated according to the formula:
+percent from the parent container's width that the result will be equal to the width of the element,
+e.g. 70 [parent width] * 0.5715 [percent from the parent width] = 40 [width of the element]
+-> (100% - 57.15%) / 2 = 21.425%
+2. Hack. By defining color the same value as background-color,
+we can use currentColor variable on the child elements as a variable
+to set background-color property on them to the same value as the main background-color.
+Note using this hack we should not define any text or use color on the main element otherwise
+text will get this value as it's text color.
+*/
+.o-bear__nostril {
+  position: absolute;
+  bottom: 0;
+  left: 21.425%;
+  width: 40px;
+  color: rgb(76, 54, 24); /*[2]*/
+}
+
+.o-bear__nostril--top {
+  height: 20px;
+  bottom: 25%;
+  background: currentcolor;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.o-bear__nostril--bottom {
+  border: 21px solid transparent;
+  border-bottom: 30px solid currentcolor;
+}
+
+
+/*BEAR FUR*/
+.o-bear__fur {
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+}
+
+.o-bear__fur--top {
+  top: 16%;
+  width: 40px;
+  height: 50px;
+  background: inherit;
+}
+
+.o-bear__fur--top-left {
+  left: 2%;
+  transform: rotate(45deg);
+}
+
+
+.o-bear__fur--top-right {
+  right: 2%;
+  transform: rotate(-45deg);
+}
+
+.o-bear__fur--center {
+  top: 30%;
+  left: -8%;
+  width: 116%;
+  height: 53%;
+  background: inherit;
+  border-radius: 9% 9% 0 0 / 90% 90% 0 0;
+}
+
+.o-bear__fur--bottom {
+  bottom: -25%;
+  width: 70px;
+  height: 110px;
+}
+
+.o-bear__fur--bottom--left {
+  left: 16%;
+  transform: rotate(-45deg);
+}
+
+.o-bear__fur--bottom--center {
+  left: 31%;
+  bottom: -32%;
+  transform: rotate(-45deg);
+}
+
+.o-bear__fur--bottom--right {
+  right: 16%;
+  transform: rotate(45deg);
+}
+
+
+/*  DECORATIONS
+========================*/
+.c-decorations {
+  position: absolute;
+  outline: 1px solid pink;
+}
+
+.c-decorations--left {
+  left: 0;
+}
+
+.c-decorations--right {
+  right: 5px;
+  transform: scaleX(-1);
+}
+
+/*LEAF*/
+.o-leaf {
+  position: absolute;
+  width: 100px;
+  height: 95px;
+  transform: rotate(47deg) scale(0.6);
+  background: rgb(101, 103, 56);
+  border-radius: 0px 190px 0px 190px / 0px 200% 0px 200%;
+}
+
+.o-leaf--top {
+  top: 15px;
+  left: 35px;
+}
+
+.o-leaf--center {
+  top: 240px;
+  transform: rotate(-45deg) scale(0.45);
+}
+
+.o-leaf--bottom {
+  top: 277px;
+  transform: rotate(-80deg) scale(0.35);
+}
+/*SPRUCE*/
+.o-spruce {
+  position: absolute;
+/*   outline: 1px solid red; */
+}
+
+.o-spruce--black {
+  position: absolute;
+  top: 23px;
+  left: -5px;
+  /* width: 60px; */
+  /* height: 250px; */
+  color: rgb(28, 24, 41);
+  border: 55px solid currentcolor;
+  border-bottom-width: 45px;
+  border-right-width: 55px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: rotateY(-70deg) skewX(3deg);
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+
+.o-spruce--black::before,
+.o-spruce--black::after {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 15px;
+  border: inherit;
+  transform: rotateY(0deg) skewX(0deg) scaleX(1.3);
+/*   border-bottom-color: red;
+  border-left-color: red; */
+}
+
+.o-spruce--black::before {
+}
+
+.o-spruce--black::after {
+  top: 68px;
+  left: -35px;
+  border-bottom-width: 65px;
+  border-right-width: 85px;
+/*     border-bottom-color: blue;
+  border-left-color: blue; */
+}
+
+.o-spruce--orange {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  /* width: 60px; */
+  /* height: 250px; */
+  color: rgba(207, 94, 64, 0.7);
+  border: 70px solid currentcolor;
+  border-bottom-width: 75px;
+  border-right-width: 75px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotateY(-70deg) skewX(3deg);
+}
+
+.o-spruce--orange::before,
+.o-spruce--orange::after {
+  content: "";
+  position: absolute;
+  left: -105px;
+  top: 45px;
+  border: inherit;
+  border-left-width: 70px;
+  border-bottom-width: 60px;
+  border-right-width: 85px;
+  transform: rotateY(0deg) skewX(0deg) scaleX(1.3);
+/*   border-bottom-color: red;
+  border-left-color: red; */
+}
+
+.o-spruce--orange::before {
+}
+
+.o-spruce--orange::after {
+  top: 142px;
+  left: -155px;
+/*     border-bottom-color: blue;
+  border-left-color: blue; */
+  border-left-width: 90px;
+  border-bottom-width: 60px;
+  border-right-width: 105px;
+}
+
+
+/*
+  1. Overrides transform value of the parent container
+*/
+.o-spruce__bottom-triangle {
+  position: absolute;
+  right: -50px;
+  bottom: -271px;
+  border-bottom: 35px solid currentColor;
+  border-left: 35px solid transparent;
+  transform: rotateY(0deg) skewX(0deg) scaleX(2); /*[1]*/
+}
+
+
+
+.o-triangle {
+  position: absolute;
+  left: 153px;
+  top: 291px;
+  color: rgb(101, 103, 56);
+  border-bottom: 70px solid currentcolor;
+  border-right: 79px solid transparent;
+/*   z-index: 700; */
+}
+
+
+.o-triangle::before {
+  content: "";
+  position: absolute;
+/*   left: 317px; */
+/*   top: 909px; */
+  left: 1px;
+  top: 45px;
+  color: rgb(101, 103, 56);
+  border-bottom: 25px solid currentcolor;
+  border-right: 29px solid transparent;
+  mix-blend-mode: multiply;
+}
+
+.c-decorations--left .o-triangle {
+    left: 155px;
+}
+
+
+/*======================
+        FOOTER
+========================*/
+.c-poster__footer {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+/*   background: rgba(0, 0, 0, .1); */
+  z-index: 2;
+}
+
+.c-poster__footer > * {
+  margin: 0;
+}
+
+.c-poster__title {
+  font-size: 3.3rem;
+  letter-spacing: 0.155rem;
+  line-height: 0.5;
+}
+
+.c-poster__sub-title {
+  position: relative;
+  font-size: 1.75rem;
+  letter-spacing: 0.29rem;
+  line-height: 2.5;
+}
+
+
+.c-poster__sub-title::before,
+.c-poster__sub-title::after {
+  content: "";
+  position: absolute;
+  top: 1.91rem;
+  width: 84px;
+  height: 20px;
+  background: rgba(207, 94, 64, 0.85);
+/*   opacity: 0.15; */
+  background-image: url(https://farm5.staticflickr.com/4829/31443305887_88c76f5027_o.jpg);
+  background-blend-mode: soft-light;
+}
+
+
+.c-poster__sub-title::before {
+  left: 38px;
+}
+
+
+.c-poster__sub-title::after {
+  right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************/
+
+
+.dribble-bear-img {
+  position: absolute;
+  top: 610px;
+}
