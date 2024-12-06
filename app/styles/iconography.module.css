@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  opacity: 0.1; /* Makes it subtle for the inlaid effect */
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  fill: rgba(255, 255, 255, 0.2); /* Adjust color and opacity */
+}
+
+.hey {
+  position: relative;
+  color: rgba(23, 23, 23, 0.8);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
+               -1px -1px 1px rgba(0, 0, 0, 0.2);
+  mix-blend-mode: multiply;
+  font-size: 1.2em;
+  font-family: 'National Park Variable', 'National Park', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}

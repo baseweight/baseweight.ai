@@ -1,0 +1,29 @@
+/* TEAM */
+	El Presidente: Joe Bowser
+	Contact: joe [at] baseweight.ai
+	BlueSky: @infil00p
+	From: The Woods, Canada
+
+	The American: Vincent van Haaff
+	BlueSky: @vincentpants
+	From: Los Angeles, CA, USA
+
+/* THANKS */
+
+	Advice & Guidance: The Greybeards
+	Slack: @betamax
+	From: Vancouver, BC, Canada
+
+  Support & Encouragement: Nibber The Cat
+  Slack: @nibbler
+  From: Surrey, BC, Canada
+
+
+	Media Queries by: Vincent van Haaff (@vincentpants) and Joe Bowser (@infil00p)
+
+
+/* SITE */
+	Last update:2024/12/05
+	Language: English
+	Doctype:HTML5
+	IDE: neovim, xcode, jetbrains, zsh, miniforge
