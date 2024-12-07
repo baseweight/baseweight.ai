@@ -88,6 +88,7 @@ export default function About() {
               <h3 className="text-xl font-semibold">Vincent van Haaff</h3>
               <p className="text-gray-700">CTO</p>
               <p className="text-gray-600 mt-2">
+                Vincent makes the complex simple. A technical  eighteen years of commercial experience and full-stack skills
                 Vincent van Haaff is a passionate technical creative with over eighteen years of commercial experience and full-stack skills
                 in the design, development and maintenance of modern, user centered data-driven products and services. Vincent creates engaging experiences
                 for web, mobile, new media, and console and have a strong interest in performance, engagement, clean efficient code, smart systems architecture,
