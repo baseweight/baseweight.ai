@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Image from "next/image";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
@@ -21,7 +21,7 @@ export default function About() {
         <section className="bg-white shadow-lg rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
           <p className="text-gray-700">
-            To empower organizations to innovate and excel with AI by providing tailored solutions, cutting-edge products, and world-class consultancy services.
+            o empower organizations to innovate and excel with AI by providing tailored solutions, cutting-edge products, and world-class consultancy services.
           </p>
         </section>
 
@@ -60,7 +60,7 @@ export default function About() {
             {/* Team Member 1 */}
             <div className="flex flex-col items-center text-center">
               <Image
-                src="/team-member-1.jpg" // Replace with your team member's image
+                src="/joe.jpg"
                 alt="Joe Bowser"
                 width={150}
                 height={150}
@@ -69,7 +69,7 @@ export default function About() {
               <h3 className="text-xl font-semibold">Joe Bowser</h3>
               <p className="text-gray-700">CEO & Founder</p>
               <p className="text-gray-600 mt-2">
-                Joe has over twenty years of experience developing web, desktop and mobile applications, and five years working directly on 
+                Joe has over twenty years of experience developing web, desktop and mobile applications, and five years working directly on
                 AI features in Adobe products such as Photoshop, Lightroom, Illustrator, Premiere Pro and many others.  Before he worked
                 in the local ML space, he co-founded PhoneGap, one of the first cross-platform hybrid mobile development frameworks that
                 empowered users to developer applications using web technologies.
@@ -79,7 +79,7 @@ export default function About() {
             {/* Team Member 2 */}
             <div className="flex flex-col items-center text-center">
               <Image
-                src="/team-member-2.jpg" // Replace with your team member's image
+                src="/vincent.jpg"
                 alt="Vincent van Haaff"
                 width={150}
                 height={150}
@@ -88,14 +88,14 @@ export default function About() {
               <h3 className="text-xl font-semibold">Vincent van Haaff</h3>
               <p className="text-gray-700">CTO</p>
               <p className="text-gray-600 mt-2">
-                Vincent van Haaff is a passionate technical creative with over eighteen years of commercial experience and full-stack skills 
-                in the design, development and maintenance of modern, user centered data-driven products and services. Vincent creates engaging experiences 
+                Vincent van Haaff is a passionate technical creative with over eighteen years of commercial experience and full-stack skills
+                in the design, development and maintenance of modern, user centered data-driven products and services. Vincent creates engaging experiences
                 for web, mobile, new media, and console and have a strong interest in performance, engagement, clean efficient code, smart systems architecture,
                 and accomplishing it with a strong, polyglot team.
               </p>
             </div>
 
-           
+
           </div>
         </section>
       </div>
