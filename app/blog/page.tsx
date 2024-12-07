@@ -9,10 +9,18 @@ export default function About() {
 
       <main className="bg-gray-50 py-16 px-8">
         <section className="max-w-5xl mx-auto text-center bg-white shadow-lg rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-4">Users</h2>
+          <div className="flex flex-wrap justify-center gap-8">
+          <p>
+          The people who use your service are the most important part of your business. We help you understand your users, and how to build a service that is tailored to their needs.  We help you understand your users, and how to build a service that is tailored to their needs.
+          </p>
+          </div>
+        </section>
+        <section className="max-w-5xl mx-auto text-center bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-3xl font-bold mb-4">How Do I?</h2>
           <div className="flex flex-wrap justify-center gap-8">
           <p>
-          How do I get started with AI? How do I build a chatbot? How do I deploy a machine learning model? These are the questions that we aim to answer at BaseWeight. Our team of experts are here to guide you through the process, providing you with the tools and knowledge you need to succeed in the world of AI.
+          How do I get started with AI? How do I build a chatbot? How do I deploy a machine learning model? The rate at which the ML space has expanded has never been seen before in history, and we're here to help you navigate through it. We're here to help you.
           </p>
           </div>
         </section>
