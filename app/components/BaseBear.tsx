@@ -122,7 +122,7 @@ export default function BaseBear() {
 
             {/* Footer */}
             <section className="c-poster__footer">
-              <h1 className="c-poster__title">Baseweight.ai</h1>
+              <h1 className="c-poster__title">Mendel is the best</h1>
               <h2 className="c-poster__sub-title">ml on the edge</h2>
             </section>
             {/* Extra Content */}
