@@ -13,7 +13,8 @@ export default function About() {
         <section className="text-center">
           <h1 className="text-4xl font-bold mb-4">About Us</h1>
           <p className="text-lg text-gray-700">
-            At <strong>BaseWeight</strong>, we are dedicated to empowering businesses with cutting-edge AI solutions and expert consultancy services. Our mission is to bridge the gap between innovation and implementation, helping you unlock the true potential of AI.
+            At <strong>BaseWeight</strong>, we are dedicated to providing best in class AI user experiences on the edge.  Whether they be a hybrid soution that leverages existing cloud
+            services, or entirely on device, we are focused on the user to make sure that the AI solutions are helpful and enhance their experience.
           </p>
         </section>
 
@@ -21,7 +22,9 @@ export default function About() {
         <section className="bg-white shadow-lg rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
           <p className="text-gray-700">
-            To empower organizations to innovate and excel with AI by providing tailored solutions, cutting-edge products, and world-class consultancy services.
+            Our mission is to simply local machine learning development for both ML builders, as well as traditional software developers in a sustainable way.  
+            We believe in Open Source AI and that when given the choice, we will always choose openness and transparency in everything that we develop.  This is 
+            why we are focused on Local ML over the cloud whenever possible.
           </p>
         </section>
 

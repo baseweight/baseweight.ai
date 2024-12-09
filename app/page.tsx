@@ -30,8 +30,15 @@ export default function Home() {
             <p className="text-lg mb-6">
               Empowering AI Everywhere
             </p>
+            <a
+              href="/about"
+              className="inline-block bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition"
+            >
+              Learn More
+            </a>
           </div>
         </section>
+
 
 
         {/* Call to Action */}
