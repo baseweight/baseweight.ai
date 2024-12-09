@@ -30,24 +30,9 @@ export default function Home() {
             <p className="text-lg mb-6">
               Empowering AI Everywhere
             </p>
-            <a
-              href="#about"
-              className="inline-block bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition"
-            >
-              Learn More
-            </a>
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="bg-white shadow-lg rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Machine Learning and Tools for the Edge</h2>
-          <p className="text-gray-700">
-            Machine Learning Engineers and Cloud Developers have different skillsets, and our goal as a company
-            is to build tools to allow for better collaboration and faster technical transfer so that models developed
-            on the cloud can be deployed on device faster, and more efficiently.
-          </p>
-        </section>
 
         {/* Call to Action */}
         <section className="bg-gray-100 py-16 px-8">
@@ -55,7 +40,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">
               Sign up for our newsletter
             </h2>
-            <p className="text-lg mb-8">
+            <p className="text-lg mb-8">  
               Sign up to to get updates about new products and services currently in development
             </p>
             <MailchimpSubscribe />
