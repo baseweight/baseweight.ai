@@ -86,7 +86,7 @@ export default function About() {
                 className="rounded-full mb-4"
               />
               <h3 className="text-xl font-semibold">Vincent van Haaff</h3>
-              <p className="text-gray-700">CTO</p>
+              <p className="text-gray-700">CTO & Cofounder</p>
               <p className="text-gray-600 mt-2">
                 Hi I'm Vincent, an engineer, serial entrepreneur, and tech native. Over the last two decades, I’ve built my career at the intersection of software, hardware, and user-centered design, with expertise in cloud and edge computing, embedded systems, digital signal processing (DSP), computer vision (CV), and human-computer interaction (HCI). I’ve had the privilege of working with industry leaders like Microsoft, Bose, and Vancouver Airport Authority, but my true passion lies in startups.
                 I’m not just an engineer—I’m a creator. My journey has spanned co-founding social enterprises like Vancouver Hackerspace and Mini-Makerfaire, and building Aurora Digitali, where technology meets social impact. I also created crossfader.fm, a music production and community platform for iOS. These ventures reflect my belief in sustainable, locally impactful tech that benefits people and the planet.
