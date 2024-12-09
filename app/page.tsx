@@ -48,6 +48,12 @@ export default function Home() {
               We believe in Open Source AI and that when given the choice, we will always choose openness and transparency in everything that we develop.  This is 
               why we are focused on Local ML over the cloud whenever possible.
             </p>
+            <br />
+            <p className="text-gray-700">
+              We're currently working on a wide variety of use cases for Local ML, such as the widespread CV and NLP use cases
+              as well as Generative AI use cases and will have some annoucements in early 2025.  Subscribe to keep in touch.
+            </p>
+            
           </div>
         </section>
 
@@ -61,7 +67,6 @@ export default function Home() {
             </h1>
           </div>
         </section>
-
 
         {/* Call to Action */}
         <section className="bg-gray-100 py-16 px-8">
