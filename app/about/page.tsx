@@ -88,7 +88,7 @@ export default function About() {
               <h3 className="text-xl font-semibold">Vincent van Haaff</h3>
               <p className="text-gray-700">CTO & Cofounder</p>
               <p className="text-gray-600 mt-2">
-                Hi I'm Vincent, an engineer, serial entrepreneur, and tech native. Over the last two decades, I’ve built my career at the intersection of software, hardware, and user-centered design, with expertise in cloud and edge computing, embedded systems, digital signal processing (DSP), computer vision (CV), and human-computer interaction (HCI). I’ve had the privilege of working with industry leaders like Microsoft, Bose, and Vancouver Airport Authority, but my true passion lies in startups.
+                Hi I'm Vincent, engineer, serial entrepreneur, and tech native. Over the last two decades, I’ve built my career at the intersection of software, hardware, and user-centered design, with expertise in cloud-to-edge computing, embedded systems, digital signal processing (DSP), computer vision (CV), and human-computer interaction (HCI). I’ve had the privilege of working with industry leaders like Microsoft, Bose, and Vancouver Airport Authority, but my true passion lies in fighting for the user.
               </p>
             </div>
 
