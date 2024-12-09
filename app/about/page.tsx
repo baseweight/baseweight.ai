@@ -60,7 +60,7 @@ export default function About() {
             {/* Team Member 1 */}
             <div className="flex flex-col items-center text-center">
               <Image
-                src="/joe.jpg"
+                src="/new_joe.jpg"
                 alt="Joe Bowser"
                 width={150}
                 height={150}
