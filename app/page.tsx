@@ -51,7 +51,7 @@ export default function Home() {
             <br />
             <p className="text-gray-700">
               We're currently working on a wide variety of use cases for Local ML, such as the widespread CV and NLP use cases
-              as well as Generative AI use cases and will have some annoucements in early 2025.  Subscribe to keep in touch.
+              as well as Generative AI use cases and will have some annoucements in early 2025.
             </p>
             
           </div>
@@ -67,20 +67,6 @@ export default function Home() {
             </h1>
           </div>
         </section>
-
-        {/* Call to Action */}
-        <section className="bg-gray-100 py-16 px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Sign up for our newsletter
-            </h2>
-            <p className="text-lg mb-8">  
-              Sign up to to get updates about new products and services currently in development
-            </p>
-            <MailchimpSubscribe />
-          </div>
-        </section>
-      </main>
 
       <Footer />
     </>
