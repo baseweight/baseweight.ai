@@ -9,6 +9,8 @@ export default function Header() {
       </Link>
       <nav>
         <ul className="flex space-x-8">
+          <li><Link href="/about" className="text-lg font-semibold hover:text-blue-600">About</Link></li>
+          <li><Link href="https://the-baseweight-blog.ghost.io/" className="text-lg font-semibold hover:text-blue-600">Blog</Link></li>
           <li><Link href="/contact" className="text-lg font-semibold hover:text-blue-600">Contact</Link></li>
         </ul>
       </nav>
