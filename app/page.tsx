@@ -51,7 +51,7 @@ export default function Home() {
             <br />
             <p className="text-gray-700">
               We're currently working on a wide variety of use cases for Local ML, such as the widespread CV and NLP use cases
-              as well as Generative AI use cases and will have some annoucements in early 2025.
+              as well as Generative AI use cases and will have some annoucements in early 2025.  Subscribe to keep in touch.
             </p>
             
           </div>
@@ -67,6 +67,9 @@ export default function Home() {
             </h1>
           </div>
         </section>
+
+
+      </main>
 
       <Footer />
     </>
