@@ -68,7 +68,23 @@ export default function Home() {
           </div>
         </section>
 
-
+        {/* Call to Action */}
+        <section className="bg-gray-100 py-16 px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Sign up for our newsletter
+            </h2>
+            <p className="text-lg mb-8">  
+              Sign up to to get updates about new products and services currently in development
+            </p>
+            <a
+              href="http://eepurl.com/i1nvpc"
+              className="inline-block bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition"
+            >
+              Click to Subscribe
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />
