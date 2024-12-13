@@ -44,7 +44,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto items-center">
             <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
             <p className="text-gray-700">
-              Our mission is to simply local machine learning development for both ML builders, as well as traditional software developers in a sustainable way.  
+              Our mission is to simplify local machine learning development for both ML builders, as well as traditional software developers in a sustainable way.  
               We believe in Open Source AI and that when given the choice, we will always choose openness and transparency in everything that we develop.  This is 
               why we are focused on Local ML over the cloud whenever possible.
             </p>
