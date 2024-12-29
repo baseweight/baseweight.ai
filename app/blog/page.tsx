@@ -20,6 +20,7 @@ export default async function Blog() {
               <Link href={`/blog/${post.slug}`}>{post.title}</Link>
             </h2>
             <p className="text-gray-600">{post.date}</p>
+            <p className="text-gray-600">{post.author}</p>
           </li>
         ))}
       </ul>

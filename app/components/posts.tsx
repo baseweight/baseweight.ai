@@ -8,6 +8,7 @@ export interface Post {
   slug: string;
   title: string;
   date: string;
+  author: string;
   content: string;
 }
 
@@ -24,7 +25,8 @@ export function getAllPosts() {
     return {
       slug,
       title: data.title,
-      date: data.date
+      date: data.date,
+      author: data.author,
     };
   });
 }
@@ -39,6 +41,7 @@ export function getPostBySlug(slug : string) {
     slug,
     title: data.title,
     date: data.date,
+    author: data.author,
     content,
   };
 }
