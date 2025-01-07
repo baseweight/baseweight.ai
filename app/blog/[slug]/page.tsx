@@ -18,11 +18,11 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
         <p className="text-gray-600 mb-8">{post.date}</p>
         <p className="text-gray-600 mb-8">{post.author}</p>
-        <article className="prose max-w-none" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <article className="markdown-content" dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
       <Footer />
-      </>
+    </>
     );
-  }
+}
 
   
