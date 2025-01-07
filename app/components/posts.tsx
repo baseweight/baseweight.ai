@@ -10,6 +10,7 @@ export interface Post {
   date: string;
   author: string;
   content: string;
+  coverImage?: string;
 }
 
 // Fetch all posts metadata
@@ -43,5 +44,6 @@ export function getPostBySlug(slug : string) {
     date: data.date,
     author: data.author,
     content,
+    coverImage: data.coverImage,
   };
 }
