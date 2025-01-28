@@ -50,7 +50,7 @@ export default function About() {
         {/* Team Section */}
         <section className="bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-3xl font-bold text-center mb-8">Meet the Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
             {/* Team Member 1 */}
             <div className="flex flex-col items-center text-center">
               <Image
@@ -61,7 +61,7 @@ export default function About() {
                 className="rounded-full mb-4"
               />
               <h3 className="text-xl font-semibold">Joe Bowser</h3>
-              <p className="text-gray-700">CEO & Founder</p>
+              <p className="text-gray-700">Founder</p>
               <p className="text-gray-600 mt-2">
                 Joe has over twenty years of experience developing web, desktop and mobile applications, and five years working directly on
                 AI features in Adobe products such as Photoshop, Lightroom, Illustrator, Premiere Pro and many others.  Before he worked
@@ -69,23 +69,6 @@ export default function About() {
                 empowered users to developer applications using web technologies.
               </p>
             </div>
-
-            {/* Team Member 2 */}
-            <div className="flex flex-col items-center text-center">
-              <Image
-                src="/vincent.jpg"
-                alt="Vincent van Haaff"
-                width={150}
-                height={150}
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold">Vincent van Haaff</h3>
-              <p className="text-gray-700">CTO & Cofounder</p>
-              <p className="text-gray-600 mt-2">
-                Vincent is an engineer, serial entrepreneur, and tech native. Over the last two decades, he's built his career at the intersection of software, hardware, and user-centered design, with expertise in cloud-to-edge computing, embedded systems, digital signal processing (DSP), computer vision (CV), and human-computer interaction (HCI). Has worked with industry leaders like Microsoft, Bose, and the Vancouver Airport Authority, but his true passion lies in fighting for the user. Unix surrealist, environmentalist, and cat-dad.
-              </p>
-            </div>
-
 
           </div>
         </section>
