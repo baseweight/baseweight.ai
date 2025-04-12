@@ -29,7 +29,7 @@ export default function Home() {
                 Empowering AI Everywhere
               </h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-                Deploy and update AI models continuously to edge devices with Baseweight. 
+                Develop, Deploy and update AI models continuously to edge devices with Baseweight. 
                 Seamless versioning, instant rollouts, and complete privacy - all without cloud dependencies.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -52,7 +52,7 @@ export default function Home() {
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-primary">Continuous Deployment</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Deploy AI Models Like Modern Software
+                Deploy Local AI Models Like Modern Software
               </p>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 Bring DevOps practices to AI deployment with our comprehensive platform for continuous model delivery and updates.
@@ -101,23 +101,23 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
                 <Card className="p-8 hover:shadow-lg transition-shadow">
                   <Box className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Model Registry</h3>
+                  <h3 className="text-xl font-semibold mb-2">SDK</h3>
                   <p className="text-muted-foreground">
-                    Centralized repository for all your AI models with versioning and metadata management.
+                    Cross-platform SDKs for iOS, Android, Desktop and Web.
                   </p>
                 </Card>
                 <Card className="p-8 hover:shadow-lg transition-shadow">
                   <Shield className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Security</h3>
+                  <h3 className="text-xl font-semibold mb-2">Model Protection</h3>
                   <p className="text-muted-foreground">
-                    Enterprise-grade security with encryption, access controls, and audit logging.
+                    Model encryption and secure inference, securing the investment in your AI models.
                   </p>
                 </Card>
                 <Card className="p-8 hover:shadow-lg transition-shadow">
                   <Rocket className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Deployment</h3>
+                  <h3 className="text-xl font-semibold mb-2">Distribution</h3>
                   <p className="text-muted-foreground">
-                    Automated deployment pipelines with rollback and canary deployment support.
+                    Automated deployment pipelines from Jupyter Notebooks and Hugging Face to Edge Devices.
                   </p>
                 </Card>
               </div>

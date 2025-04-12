@@ -66,8 +66,8 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#careers" className="text-muted-foreground hover:text-foreground">
-                  Careers
+                <Link href="/contact" className="text-muted-foreground hover:text-foreground">
+                  Contact
                 </Link>
               </li>
             </ul>
