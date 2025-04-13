@@ -13,7 +13,8 @@ import {
   RefreshCw,
   Gauge,
   CloudOff,
-  Box
+  Box,
+  Sparkles
 } from "lucide-react";
 
 export default function Home() {
@@ -25,23 +26,27 @@ export default function Home() {
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
+              <div className="mb-8 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold leading-6 text-primary ring-1 ring-inset ring-primary/20">
+                <Sparkles className="mr-2 h-4 w-4" />
+                Coming Soon
+              </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-foreground">
-                Empowering AI Everywhere
+                Continuous AI Deployment,
+                <span className="text-primary block mt-2">Right on Your Device</span>
               </h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-                Develop, Deploy and update AI models continuously to edge devices with Baseweight. 
+                Deploy and update AI models continuously to edge devices with Baseweight. 
                 Seamless versioning, instant rollouts, and complete privacy - all without cloud dependencies.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Button size="lg" className="bg-primary">
-                  Start Deploying
+                  Join Early Access
                   <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  <Github className="mr-2 h-4 w-4" />
-                  View Documentation
-                </Button>
+                </Button>               
               </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Be among the first to experience Baseweight
+              </p>
             </div>
           </div>
         </div>

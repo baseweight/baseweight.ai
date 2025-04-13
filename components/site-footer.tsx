@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { Twitter, Github, MessageSquare } from "lucide-react";
+import { X, Github, MessageSquare } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -18,8 +18,8 @@ export function SiteFooter() {
               Empowering AI Everywhere
             </p>
             <div className="mt-4 flex space-x-6">
-              <Link href="https://twitter.com/baseweight" className="text-muted-foreground hover:text-foreground">
-                <Twitter className="h-5 w-5" />
+              <Link href="https://twitter.com/baseweightai" className="text-muted-foreground hover:text-foreground">
+                <X className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link href="https://github.com/baseweight" className="text-muted-foreground hover:text-foreground">
