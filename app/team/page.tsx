@@ -10,8 +10,14 @@ const teamMembers = [
     name: "Joe Bowser",
     role: "Founder",
     image: "new_joe.jpg",
-    bio: "Previously a Senior Software Engineer at Adobe, Joe founded Baseweight to make edge AI deployment accessible and efficient.",
-  }  
+    bio: "Ex-Adobe, and one of the creators of PhoneGap and Apache Cordova, Joe has both the mobile, web and AI experience to make Baseweight a reality." 
+  },
+  {
+    name: "Brad Barclay",
+    role: "Operations",
+    image: "Brad.jpg",
+    bio: "Brad has spent the last several years leading business development and go-to-market strategy for AI-first platforms across fintech, enterprise, and infrastructure. Before working in the AI and Technology space, he helped drive AUM and revenue growth across banking and fintech while supporting strategy, operations, and commercial execution." 
+  }
 ];
 
 export default function Team() {
@@ -22,16 +28,13 @@ export default function Team() {
         <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
-              <h2 className="text-base font-semibold leading-7 text-primary">Our Team</h2>
+              
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Meet the Experts Behind Baseweight
-              </p>
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                We're a team of engineers and researchers passionate about making edge AI deployment accessible and efficient.
-              </p>
+                Meet our team
+              </p>              
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-              <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
                 {teamMembers.map((member) => (
                   <Card key={member.name} className="p-8 hover:shadow-lg transition-shadow">
                     <div className="flex flex-col items-center text-center">
