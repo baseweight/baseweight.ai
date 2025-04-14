@@ -64,7 +64,12 @@ export default async function BlogPost({ params, searchParams }: Props) {
                 {post.title}
               </h1>
               <article 
-                className="prose prose-lg prose-slate dark:prose-invert max-w-none [&>p]:my-6 [&>h2]:mt-12 [&>h2]:mb-6 [&>h3]:mt-8 [&>h3]:mb-4 [&>ul]:my-6 [&>ol]:my-6 [&>blockquote]:my-6"
+                className="prose prose-lg prose-slate dark:prose-invert max-w-none 
+                  [&>p]:my-6 [&>p]:text-base
+                  [&>h2]:mt-12 [&>h2]:mb-6 [&>h2]:text-xl [&>h2]:font-bold
+                  [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:text-lg [&>h3]:font-bold
+                  [&>ul]:my-6 [&>ol]:my-6 [&>blockquote]:my-6
+                  [&_a]:text-blue-600 [&_a]:hover:text-blue-800 dark:[&_a]:text-blue-400 dark:[&_a]:hover:text-blue-300"
                 dangerouslySetInnerHTML={{ __html: contentHtml }} 
               />
             </div>
