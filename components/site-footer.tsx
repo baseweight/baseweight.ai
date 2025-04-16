@@ -26,7 +26,7 @@ export function SiteFooter() {
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="https://discord.gg/baseweight" className="text-muted-foreground hover:text-foreground">
+              <Link href="https://discord.gg/bKa3XgXxFz" className="text-muted-foreground hover:text-foreground">
                 <MessageSquare className="h-5 w-5" />
                 <span className="sr-only">Discord</span>
               </Link>

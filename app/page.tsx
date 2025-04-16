@@ -16,10 +16,15 @@ import {
   Box,
   Sparkles
 } from "lucide-react";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col">
+      <Script 
+        src="https://getlaunchlist.com/js/widget-diy.js" 
+        strategy="lazyOnload"
+      />
       <SiteHeader />
       <main className="flex-1">
         {/* Hero Section */}
@@ -38,15 +43,27 @@ export default function Home() {
                 Deploy and update AI models continuously to edge devices with Baseweight. 
                 Seamless versioning, instant rollouts, and complete privacy - all without cloud dependencies.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Button size="lg" className="bg-primary">
-                  Join Early Access
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>               
+              <div className="mt-10 flex flex-col items-center justify-center gap-y-4">
+                <form 
+                  className="launchlist-form flex flex-col sm:flex-row gap-3 w-full max-w-md" 
+                  action="https://getlaunchlist.com/s/fu3a42" 
+                  method="POST"
+                >
+                  <input 
+                    name="email" 
+                    type="email" 
+                    placeholder="Your email"
+                    className="px-4 py-2 rounded-lg border border-input bg-background"
+                    required
+                  />
+                  <Button type="submit" size="lg" className="bg-primary">
+                    Get Early Access
+                  </Button>
+                </form>
+                <p className="text-sm text-muted-foreground">
+                  Join the waitlist for early access
+                </p>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Be among the first to experience Baseweight
-              </p>
             </div>
           </div>
         </div>

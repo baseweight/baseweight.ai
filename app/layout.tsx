@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,10 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Script 
+          src="https://getlaunchlist.com/js/widget-diy.js" 
+          strategy="lazyOnload"
+        />
       </body>
       <GoogleAnalytics gaId="G-EPD073DL2R" />
     </html>
