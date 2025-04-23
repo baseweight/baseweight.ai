@@ -1,10 +1,12 @@
 "use client";
 
-
 import React, { FormEvent, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -54,88 +56,100 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <>
-      <Header />
-
-      <main className="bg-gray-50 py-16 px-8">
-        <section className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
-          <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
-          <p className="text-gray-700 text-center mb-8">
-            Have any questions or want to work with us? Please fill out the form below, and we’ll get back to you as soon as possible.
-          </p>
-
-          {/* Contact Form */}
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                required
-                value={formData.name}
-                onChange={handleChange}
-              />
+    <div className="relative flex min-h-screen flex-col">
+      <SiteHeader />
+      <main className="flex-1">
+        <div className="py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <h2 className="text-base font-semibold leading-7 text-primary">Contact</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
+                Get in Touch
+              </p>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                Have any questions or want to work with us? Please fill out the form below, and we'll get back to you as soon as possible.
+              </p>
             </div>
+            <div className="mx-auto mt-16 max-w-2xl sm:mt-20">
+              <Card className="p-8">
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-            <div>
-              <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                required
-                value={formData.email}
-                onChange={handleChange}
-              />
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Subject
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Message
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      className="min-h-[150px]"
+                    />
+                  </div>
+
+                  {successMessage && (
+                    <div className="p-4 text-sm text-green-700 bg-green-100 rounded-md">
+                      {successMessage}
+                    </div>
+                  )}
+
+                  {errorMessage && (
+                    <div className="p-4 text-sm text-red-700 bg-red-100 rounded-md">
+                      {errorMessage}
+                    </div>
+                  )}
+
+                  <Button type="submit" className="w-full" disabled={loading}>
+                    {loading ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
+              </Card>
             </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-lg font-medium text-gray-700">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                required
-                value={formData.subject}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                required
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
-            </div>
-
-            <div className="text-center">
-              <button
-                type="submit"
-                className={`inline-block w-full md:w-auto px-6 py-3 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                disabled={loading}
-              >
-                {loading ? 'Sending...' : 'Send Message'}
-              </button>
-            </div>
-
-            {successMessage && <p className="text-center text-green-600">{successMessage}</p>}
-            {errorMessage && <p className="text-center text-red-600">{errorMessage}</p>}
-          </form>
-        </section>
+          </div>
+        </div>
       </main>
-
-      <Footer />
-    </>
+      <SiteFooter />
+    </div>
   );
 };
 

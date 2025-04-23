@@ -1,31 +1,59 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { getAllPosts } from '@/components/posts';
-
+import { Card } from "@/components/ui/card";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { BookOpen, Calendar, User } from "lucide-react";
+import { getBlogPosts } from "@/lib/mdx";
 
 export default async function Blog() {
-  const posts = getAllPosts();
+  const blogPosts = await getBlogPosts();
 
   return (
-    <>
-    <Header />
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
-      <ul className="space-y-6">
-        {posts.map((post) => (
-          <li key={post.slug} className="p-4 bg-gray-100 rounded-lg shadow">
-            <h2 className="text-2xl font-semibold mb-2">
-              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-            </h2>
-            <p className="text-gray-600">{post.date}</p>
-            <p className="text-gray-600">{post.author}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="relative flex min-h-screen flex-col">
+      <SiteHeader />
+      <main className="flex-1">
+        <div className="py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <h2 className="text-base font-semibold leading-7 text-primary">Blog</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
+                Latest Insights and Updates
+              </p>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                Explore our latest thoughts on edge AI, continuous deployment, and industry trends.
+              </p>
+            </div>
+            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+              <div className="grid grid-cols-1 gap-8">
+                {blogPosts.map((post) => (
+                  <Card key={post.slug} className="p-8 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                        <span className="inline-flex items-center">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {post.date}
+                        </span>
+                        <span className="inline-flex items-center">
+                          <User className="h-4 w-4 mr-1" />
+                          {post.author}
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-semibold mb-2">{post.title}</h3>
+                      <p className="text-muted-foreground mb-4">{post.excerpt}</p>
+                      <div className="flex items-center justify-between mt-4">
+                        <a href={`/blog/${post.slug}`} className="text-sm text-primary hover:underline">
+                          Read more
+                        </a>
+                        <BookOpen className="h-5 w-5 text-primary" />
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <SiteFooter />
     </div>
-    <Footer />
-    </>
   );
 }

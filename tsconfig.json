@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,36 +18,10 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "app/components/*"
-      ],
-      "@/styles/*": [
-        "app/styles/*"
-      ],
-      "@/utils/*": [
-        "app/scripts/utils*"
-      ],
-      "@/public/*": [
-        "public/*"
-      ],
-      "@/fonts/*": [
-        "app/fonts/*"
-      ], // Fonts in tsx. Note that the path is different from the path in the css file.
-      "@/app/*": [
-        "app/*"
-      ] // For Joe
-    },
-    "target": "ES2017"
+      "@/*": ["./*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
