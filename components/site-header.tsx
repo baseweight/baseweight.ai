@@ -27,6 +27,9 @@ export function SiteHeader() {
             <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
               Blog
             </Link>
+            <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              Contact
+            </Link>
           </nav>
         </div>
         <div className="flex items-center space-x-4">

@@ -44,24 +44,19 @@ export function SiteFooter() {
                 <Link href="#security" className="text-muted-foreground hover:text-foreground">
                   Security
                 </Link>
-              </li>
-              <li>
-                <Link href="#pricing" className="text-muted-foreground hover:text-foreground">
-                  Pricing
-                </Link>
-              </li>
+              </li>           
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-semibold">Company</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <Link href="#team" className="text-muted-foreground hover:text-foreground">
+                <Link href="/team" className="text-muted-foreground hover:text-foreground">
                   Team
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="text-muted-foreground hover:text-foreground">
+                <Link href="/blog" className="text-muted-foreground hover:text-foreground">
                   Blog
                 </Link>
               </li>
@@ -72,26 +67,7 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-sm font-semibold">Resources</h3>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li>
-                <Link href="#documentation" className="text-muted-foreground hover:text-foreground">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="#api" className="text-muted-foreground hover:text-foreground">
-                  API Reference
-                </Link>
-              </li>
-              <li>
-                <Link href="#support" className="text-muted-foreground hover:text-foreground">
-                  Support
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
         </div>
         <div className="mt-16 border-t pt-8">
           <p className="text-center text-sm text-muted-foreground">
