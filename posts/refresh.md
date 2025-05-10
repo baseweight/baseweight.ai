@@ -1,25 +1,55 @@
 ---
-title: "Closed Beta and Web Summit"
+title: "Announcing Baseweight Model Park"
 date: "2025-05-10"
 author: "Joe Bowser"
 coverImage: '/hello-world-cover.jpg'
 ---
 
-It's been a few months since the last update, and a fair bit has happened.  First off, Baseweight is one of the featured 
-startups at Vancouver Web Summit. If you're doing any work deploying models on mobile, on the web or on edge devices, we would like to talk to you.  Please feel free to find us at the conference. 
+It’s been a few months since our last update, and a lot has happened. First off: Baseweight is a featured startup at **Vancouver Web Summit**! If you're working on deploying models to mobile, web, or edge devices, come talk to us — we want to hear about your pain points and share what we’ve built.
 
-As far as our first prototypes, we have been quietly at work getting our Model Deployment platform, the Baseweight Model Park, ready for closed beta.  We have a video posted on YouTube showing the basic functionality, which includes our OnDevice SDK, model encryption, as well as the online platform that allows you to manage the encrypted models and have them either uploaded using our Python SDK, or from the Web Interface.  Depending on user feedback, we may add 
-HuggingFace hooks to pull the models from the HF Hub.
+## What We’ve Built: Baseweight Model Park
 
-### Why Model Deployment?
+After months of quiet development, we're officially launching the **closed beta** of our model deployment platform: **Baseweight Model Park**.
 
-The fact is that we had to start somewhere in the OnDevice space.  The most logical thing would be with an SDK that tackles the inference framework, but there are already ten different inference frameworks, we decided to look at the problem of IP theft of models, and while we can't guarantee that the model won't walk off, we can provide a tool established in the best practices of the industry so that new developers don't have to re-invent the wheel every single time.
+You can check out a short demo video on YouTube showcasing the basic functionality. The MVP includes:
 
-### Why not start with model export?
+* An **OnDevice SDK** for downloading encrypted models on Android (iOS coming soon),
+* **Model encryption** built on best practices to reduce IP theft risks,
+* A simple **web UI and Python SDK** to upload and manage models.
 
-Model export, namely the process of getting a model out of PyTorch, the most popular training framework to one of the many inference frameworks has been a major challenge and is the primary barrier to widespread OnDevice adoption.  The fact is that there is no simple portability of networks and frameworks, and that every attempt to do so has created a new ML inference framework with the main evidence of this being both llama.cpp, which was written to acclerate transformer based models on x86 CPUs and Executorch, which was written for Meta to have a PyTorch native way to compile models into a runtime to be executed on various hardware backends.
+We may add HuggingFace Hub integration depending on feedback, but the core product is already live and working — with encrypted model downloads ready for integration.
 
-In addition to all of this, model export by itself isn't enough.  There's also the rest of the inference pipeline, which includes the pre-processing and post-processing code for each application.  For classic imagenet based models including GANs, there's the normalization step, for LLMs there's the tokenization step, which can also include RAG where previously generated or relevant data is stored in a vector database, and then there's the most complex of all, which are the Diffusion family of models, which include no less than four models executed sequentially based on data derived from the prior.  This is a whole industry, and while our goal is to provide tools for the entire end to end development experience, we're launching with model deployment. 
+## Why Start with Model Deployment?
 
-We do offer consulting services for companies looking to export models and build custom pipelines. For consulting services, please [contact us](https://baseweight.ai/contact) using our form and we will get back to you shortly to book an introductory call and to discuss your project further.
+In OnDevice AI, you have to start somewhere. We debated starting with a new inference framework, but honestly? There are already ten of those — each with their quirks, hardware targets, and half-baked compatibility layers.
 
+Instead, we focused on a common problem everyone faces: **model protection and deployment**.
+
+We know we can't guarantee that a model won’t be stolen, and our founder himself in his previous role has said many times that you can't fully protect assests stored on the attacker's machine. That being said, we can at least make it harder. Our approach is based on widely accepted encryption and deployment best practices, so developers don’t have to reinvent the wheel or duct-tape together insecure pipelines.  This is what we like to call bike lock security.
+
+## Why Not Start with Model Export?
+
+We thought about it — a lot. But model export is a *huge* challenge, and solving it properly means going way deeper than just converting weights.
+
+Getting a model out of PyTorch and into a usable format for mobile or web inference is still one of the biggest bottlenecks in OnDevice AI. There’s no universal standard, and every serious attempt to address it — from Meta’s **Executorch** to the community-driven **llama.cpp** — has had to spin up a whole new inference stack just to make things work on real-world hardware.
+
+Even with great tooling like Executorch (which we respect a lot and have contributed back to), you still need to solve:
+
+* **Pre- and post-processing** logic for each model type,
+* **Tokenizer integration** for LLMs (and often RAG and vector databases),
+* And **multi-stage pipelines** for models like Diffusion, where four or more models might be chained together with dynamic intermediate results.
+
+This isn’t just a tooling problem — it’s a full pipeline problem. That’s why we’re starting with deployment first: encryption, delivery, and a standardized runtime layer. Once that’s solid, we’ll expand upward to tackle model conversion in a serious way.
+
+## Where We’re Going Next
+
+We're starting with deployment. But our long-term roadmap includes:
+
+* **Model conversion pipelines** for ONNX, TorchScript, GGUF, etc.
+* **Cross-platform SDKs** that actually handle post-processing for you.
+* **Support for VLMs (Visual Language Models)** to enable lightweight multimodal use cases on mobile and edge devices.
+* **Exploration of embedded and IoT targets**, including MCU-class devices. We believe OnDevice AI doesn’t stop at smartphones — and the next wave of TinyML tools will need robust, encrypted, and production-ready pipelines.
+
+And yes — we do offer **consulting services** if you're trying to ship models now and can't wait for the full platform to mature. Hit us up at [baseweight.ai/contact](https://baseweight.ai/contact) and we’ll book a call.
+
+This is just the beginning. We’re building the deployment layer for the future of AI — **encrypted, cross-platform, and OnDevice-first**.
