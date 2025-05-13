@@ -2,7 +2,7 @@
 title: "Announcing Baseweight Model Park"
 date: "2025-05-10"
 author: "Joe Bowser"
-coverImage: '/hello-world-cover.jpg'
+coverImage: '/model_park.png'
 ---
 
 It's been a few months since our last update, and a lot has happened. First off: Baseweight is a featured startup at **Vancouver Web Summit**! If you're working on deploying models to mobile, web, or edge devices, come talk to us — we want to hear about your pain points and share what we've built.
@@ -11,15 +11,21 @@ It's been a few months since our last update, and a lot has happened. First off:
 
 After months of quiet development, we're officially launching the **closed beta** of our model deployment platform: **Baseweight Model Park**.
 
-You can check out a short demo video on YouTube showcasing the basic functionality. The MVP includes:
+You can check out a short demo video on YouTube showcasing the basic functionality. 
+
+<youtube id="NvSh-sfCQ5s" />
+
+Or this video showing the full functionality on a simpler, smaller model.
 
 <youtube id="WiamuwOLTsQ" />
+
+The MVP includes:
 
 * An **OnDevice SDK** for downloading encrypted models on Android (iOS coming soon),
 * **Model encryption** built on best practices to reduce IP theft risks,
 * A simple **web UI and Python SDK** to upload and manage models.
 
-We may add HuggingFace Hub integration depending on feedback, but the core product is already live and working — with encrypted model downloads ready for integration.
+We will be HuggingFace Hub hooks, and other features but the core product is already live and working — with encrypted model downloads ready for integration.
 
 ## Why Start with Model Deployment?
 
@@ -54,4 +60,4 @@ We're starting with deployment. But our long-term roadmap includes:
 
 And yes — we do offer **consulting services** if you're trying to ship models now and can't wait for the full platform to mature. Hit us up at [baseweight.ai/contact](https://baseweight.ai/contact) and we'll book a call.
 
-This is just the beginning. We're building the deployment layer for the future of AI — **encrypted, cross-platform, and OnDevice-first**.
+This is just the beginning. We're building the deployment layer for the future of AI — **encrypted, cross-platform, and OnDevice**.
