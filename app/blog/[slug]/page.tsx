@@ -64,7 +64,7 @@ export default async function BlogPost({ params, searchParams }: Props) {
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-foreground mb-6">
                 {post.title}
               </h1>
-              <div className="prose prose-lg dark:prose-invert max-w-none">
+              <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
                 {segments.map((segment, index) => {
                   if (segment.startsWith('<youtube')) {
                     const id = segment.match(/id="([^"]+)"/)?.[1];
@@ -74,10 +74,11 @@ export default async function BlogPost({ params, searchParams }: Props) {
                   return (
                     <div
                       key={index}
-                      className="[&>p]:my-8 [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:list-decimal [&>ol]:pl-6 [&>li]:my-2 
-                        [&>h2]:mt-12 [&>h2]:mb-8 [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-foreground
-                        [&>h3]:mt-10 [&>h3]:mb-6 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-foreground
-                        [&>strong]:font-bold [&>strong]:text-foreground"
+                      className="[&>p]:my-6 [&>p]:text-base
+                        [&>h2]:mt-12 [&>h2]:mb-6 [&>h2]:text-xl [&>h2]:font-bold
+                        [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:text-lg [&>h3]:font-bold
+                        [&>ul]:my-6 [&>ol]:my-6 [&>blockquote]:my-6
+                        [&_a]:text-blue-600 [&_a]:hover:text-blue-800 dark:[&_a]:text-blue-400 dark:[&_a]:hover:text-blue-300"
                       dangerouslySetInnerHTML={{ 
                         __html: remark().use(html).processSync(segment).toString() 
                       }} 

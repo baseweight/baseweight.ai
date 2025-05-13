@@ -25,39 +25,51 @@ The MVP includes:
 * **Model encryption** built on best practices to reduce IP theft risks,
 * A simple **web UI and Python SDK** to upload and manage models.
 
-We will be HuggingFace Hub hooks, and other features but the core product is already live and working — with encrypted model downloads ready for integration.
+We will be adding HuggingFace Hub hooks, and other features but the core product is already live and working — with encrypted model downloads ready for integration.
 
-## Why Start with Model Deployment?
+## Why Start with Yet Another Model Zoo?
 
-In OnDevice AI, you have to start somewhere. We debated starting with a new inference framework, but honestly? There are already ten of those — each with their quirks, hardware targets, and half-baked compatibility layers.
+Let’s be clear: Baseweight Model Park isn’t a Zoo. It's not about collecting models — it's about delivering them.
 
-Instead, we focused on a common problem everyone faces: **model protection and deployment**.
+Right now, most ML models are distributed via Hugging Face, which is great for storage and discovery. But for anyone trying to ship a model to a phone, a browser, or an embedded device, the journey doesn’t end with a .gguf or .onnx file on a repo. You still need to:
 
-We know we can't guarantee that a model won't be stolen, and our founder himself in his previous role has said many times that you can't fully protect assests stored on the attacker's machine. That being said, we can at least make it harder. Our approach is based on widely accepted encryption and deployment best practices, so developers don't have to reinvent the wheel or duct-tape together insecure pipelines.  This is what we like to call bike lock security.
+* Convert the model to the right format for your target runtime,
+* Encrypt it to protect your IP (especially if you're shipping on mobile),
+* Host it somewhere fast and cheap,
+* Integrate it into your app with a working SDK,
+* Deal with platform-specific quirks (iOS, Android, WASM, etc).
 
-## Why Not Start with Model Export?
+Most teams duct-tape this together with Python scripts, S3 buckets, and Jupyter notebooks. We think that it's error-prone, expensive to maintain, and hard to scale.
 
-We thought about it — a lot. But model export is a *huge* challenge, and solving it properly means going way deeper than just converting weights.
+Baseweight Model Park automates the boring parts of model deployment, starting with encryption and download via SDK, and expanding toward format conversion and device-specific packaging.
 
-Getting a model out of PyTorch and into a usable format for mobile or web inference is still one of the biggest bottlenecks in OnDevice AI. There's no universal standard, and every serious attempt to address it — from Meta's **Executorch** to the community-driven **llama.cpp** — has had to spin up a whole new inference stack just to make things work on real-world hardware.
+This isn’t about building another static hub — it’s about building a pipeline. One where you drop in your trained model and get back a signed, encrypted, device-ready package.
 
-Even with great tooling like Executorch (which we respect a lot and have contributed back to), you still need to solve:
+## Where We're Headed
+Model Park is just the start.
 
-* **Pre- and post-processing** logic for each model type,
-* **Tokenizer integration** for LLMs (and often RAG and vector databases),
-* And **multi-stage pipelines** for models like Diffusion, where four or more models might be chained together with dynamic intermediate results.
+Our goal is to support:
 
-This isn't just a tooling problem — it's a full pipeline problem. That's why we're starting with deployment first: encryption, delivery, and a standardized runtime layer. Once that's solid, we'll expand upward to tackle model conversion in a serious way.
+* Format conversion workflows (GGUF ⇄ Executorch ⇄ ONNX ⇄ LiteRT),
+* Target-specific optimization (Vulkan/OpenCL for Android, Metal for iOS, etc),
+* Streaming inference support for TTS/STT/LLMs on-device,
+* Encryption and Delivery that integrates cleanly with existing apps,
+* CLI and CI/CD tools to bring this into your daily workflow — not just notebooks.
 
-## Where We're Going Next
+We want Baseweight to be the platform you reach for when you need to put a model anywhere that isn't a server. Because OnDevice isn’t just a niche — it's the future of privacy-respecting, low-latency, offline-capable AI.
 
-We're starting with deployment. But our long-term roadmap includes:
+## Try It — Or Help Shape It
 
-* **Model conversion pipelines** for ONNX, TorchScript, GGUF, etc.
-* **Cross-platform SDKs** that actually handle post-processing for you.
-* **Support for VLMs (Visual Language Models)** to enable lightweight multimodal use cases on mobile and edge devices.
-* **Exploration of embedded and IoT targets**, including MCU-class devices. We believe OnDevice AI doesn't stop at smartphones — and the next wave of TinyML tools will need robust, encrypted, and production-ready pipelines.
+Baseweight Model Park is in **closed beta**, and we’re actively looking for early users. If you're shipping models to real devices — or trying to — we want to hear from you.
 
-And yes — we do offer **consulting services** if you're trying to ship models now and can't wait for the full platform to mature. Hit us up at [baseweight.ai/contact](https://baseweight.ai/contact) and we'll book a call.
+- Need help encrypting a model for mobile?  
+- Want to stop babysitting conversion scripts?  
+- Curious if GGUF, Executorch or ONNX Runtime is a better fit for your app?
 
-This is just the beginning. We're building the deployment layer for the future of AI — **encrypted, cross-platform, and OnDevice**.
+We’re here for that. And we’re building for you.
+
+**▶️ Apply for the beta** at [baseweight.ai](https://baseweight.ai)  
+**📬 Or email us directly** at hello@baseweight.ai
+**💬 Join the conversation** on [Discord](https://discord.gg/bKa3XgXxFz)
+
+We’re also at **Vancouver Web Summit** this month — if you're there, come by and say hi.
