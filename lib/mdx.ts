@@ -46,6 +46,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       ...data,
     } as BlogPost
   } catch (error) {
+    console.error('Error processing post:', error)
     return null
   }
 } 
