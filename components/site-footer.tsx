@@ -67,8 +67,23 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-          
+          <div>
+            <h3 className="text-sm font-semibold">Terms</h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li>
+                <Link href="/terms" className="text-muted-foreground hover:text-foreground">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
+        
         <div className="mt-16 border-t pt-8">
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Baseweight. All rights reserved.
