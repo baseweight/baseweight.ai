@@ -4,7 +4,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 
 export async function getMarkdownContent(filename: string) {
-  const filePath = path.join(process.cwd(), 'app/terms', filename);
+  const filePath = path.join(process.cwd(), 'public/terms', filename);
   const fileContents = fs.readFileSync(filePath, 'utf8');
 
   // Use remark to convert markdown into HTML
