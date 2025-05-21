@@ -15,9 +15,7 @@ While LLMs are useful, there's also multimodal models, which until recently were
 
 ### Working with llama.cpp on Android
 
-The Android example in the llama.cpp library brings it in through the CMake directly allowing for build customization, and despite the longer build times, this is the way to go since this allows us to enable optimizations such as enabling Vulkan or experiment with OpenCL.  Due to time constraints, we decided to go with a Vulkan backend.
-
-As far as actually using Vulkan on Android, there was definitely a learning curve, but this video shows how to use tools like the Android GPU Inspector to make sure that the GPU is actually used and to measure battery use per inference.  Measuring the power use during the inference runs is important, since this translates to heat use.  Debugging GPU on Android is extra tricky since the power draw can be hard on the battery, which is of course plugged in.
+The Android example in the llama.cpp library brings it in through the CMake directly allowing for build customization, and despite the longer build times, this is the way to go since this allows us to enable optimizations such as enabling Vulkan or experiment with OpenCL.  Due to time constraints, we decided to go with a Vulkan backend and to show a dialog every time we do inference, since the purpose is to show it running, not to show it running super fast.
 
 ### Shipping Baseweight Snap
 
@@ -27,6 +25,7 @@ Even though it's a demo, and even though there's a lot of sharp edges, we plan o
 
 Baseweight Snap is open source on GitHub now, and we hope to ship to the Google Play store in the next couple of days leading up to Web Summit.
 
+**Join the Test Group** on [Google Play](https://play.google.com/apps/internaltest/4700798842570705295) now
 **Clone the Repo** on [GitHub](https://github.com/baseweight/BaseweightSnap)
 **📬 Or email us directly** at hello@baseweight.ai  
 **💬 Join the conversation** on [Discord](https://discord.gg/bKa3XgXxFz)
