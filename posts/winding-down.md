@@ -2,7 +2,7 @@
 title: "Baseweight Is on Hold"
 date: "2025-05-14"
 author: "Joe Bowser"
-coverImage: '/baseweight-snap-cover.jpg'
+coverImage: '/hello-world-cover.jpg'
 ---
 As of June 2025, Baseweight is paused.
 
