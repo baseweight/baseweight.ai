@@ -2,7 +2,7 @@
 title: "BaseWeight Snap"
 date: "2025-05-14"
 author: "Joe Bowser"
-coverImage: '/baseweight-snap-cover.jpg'
+coverImage: '/baseweight_snap_camera.jpg'
 ---
 
 ## Introducing Baseweight Snap
