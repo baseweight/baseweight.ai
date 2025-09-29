@@ -15,7 +15,7 @@ export function SiteFooter() {
               <span className="inline-block font-bold">Baseweight</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Empowering AI Everywhere
+              Mobile AI Services & OnDevice Consulting
             </p>
             <div className="mt-4 flex space-x-6">
               <Link href="https://twitter.com/baseweightai" className="text-muted-foreground hover:text-foreground">
@@ -33,16 +33,16 @@ export function SiteFooter() {
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold">Product</h3>
+            <h3 className="text-sm font-semibold">Services</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <Link href="#features" className="text-muted-foreground hover:text-foreground">
-                  Features
+                  Mobile AI Services
                 </Link>
               </li>
               <li>
-                <Link href="#security" className="text-muted-foreground hover:text-foreground">
-                  Security
+                <Link href="#services" className="text-muted-foreground hover:text-foreground">
+                  Our Expertise
                 </Link>
               </li>           
             </ul>

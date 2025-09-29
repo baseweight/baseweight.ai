@@ -64,10 +64,10 @@ const Contact: React.FC = () => {
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-primary">Contact</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Get in Touch
+                Start Your Mobile AI Project
               </p>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Have any questions or want to work with us? Please fill out the form below, and we'll get back to you as soon as possible.
+                Ready to integrate AI into your mobile app? Let's discuss your OnDevice Inference needs and how we can help bring your vision to life.
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20">

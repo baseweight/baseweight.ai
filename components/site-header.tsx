@@ -16,10 +16,13 @@ export function SiteHeader() {
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="/#features" className="text-muted-foreground hover:text-foreground transition-colors">
-              Features
+              Services
             </Link>
-            <Link href="/#product" className="text-muted-foreground hover:text-foreground transition-colors">
-              Product
+            <Link href="/#portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
+              Portfolio
+            </Link>
+            <Link href="/#services" className="text-muted-foreground hover:text-foreground transition-colors">
+              Expertise
             </Link>
             <Link href="/team" className="text-muted-foreground hover:text-foreground transition-colors">
               Team

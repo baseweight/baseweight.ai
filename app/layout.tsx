@@ -8,8 +8,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Baseweight - Continuous AI Model Deployment',
-  description: 'Deploy and update AI models continuously to edge devices. Seamless versioning, instant rollouts, and complete privacy without cloud dependencies.',
+  title: 'Baseweight - Mobile AI Services & OnDevice Consulting',
+  description: 'Expert OnDevice AI services and consulting for mobile applications. We help integrate Visual Language Models and AI capabilities directly into iOS and Android apps.',
 };
 
 export default function RootLayout({

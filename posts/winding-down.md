@@ -1,22 +1,50 @@
 ---
-title: "Baseweight Is on Hold"
-date: "2025-05-14"
+title: "Baseweight's New Focus: Mobile AI Services"
+date: "2025-09-29"
 author: "Joe Bowser"
 coverImage: '/hello-world-cover.jpg'
 ---
-As of June 2025, Baseweight is paused.
 
-Over the past year, we built infrastructure for secure, cross-platform AI deployment—supporting encrypted GGUF and ONNX models on Android and iOS, including early integrations with Executorch and llama.cpp. We later extended our efforts into Visual Language Models (VLMs), exploring commercial applications in video indexing and media search.
+## Baseweight's Evolution: From Platform to Services
 
-The tech worked. The timing didn’t.
+After building comprehensive infrastructure for secure, cross-platform AI deployment—supporting encrypted GGUF and ONNX models on Android and iOS, including early integrations with Executorch and llama.cpp—we've learned what the market really needs.
 
-The market for secure, on-device AI tooling remains early. VLMs show promise, but commercial demand is lagging behind the hype. Rather than continue burning runway into headwinds, we're pausing active development and shifting focus to more sustainable opportunities.
+## The Market Reality
 
-We may return to Baseweight—or its underlying technologies—if the market catches up.
+While we built powerful tools for OnDevice AI deployment, we discovered that most companies need **expert guidance and implementation services** more than they need another platform. The technical challenges of mobile AI integration are significant:
 
-If you’re building in on-device AI, VLMs, or edge inference and want to collaborate, feel free to contact us via the contact form.
+- Complex framework integrations (Core ML, TensorFlow Lite, ONNX Runtime)
+- Performance optimization for mobile hardware constraints
+- Model quantization and pruning for mobile deployment
+- Cross-platform implementation challenges
+- Privacy and security considerations
 
-—
-Joe Bowser
-Founder, Baseweight
+## Our New Focus: Mobile AI Services & Consulting
+
+Instead of continuing to build platform tools, we're now focused on what we do best: **providing expert mobile AI services and consulting**.
+
+### What We Offer
+
+- **Mobile AI Implementation**: Custom integration of AI models into iOS and Android apps
+- **Model Optimization**: Performance tuning for mobile hardware constraints
+- **Custom Solutions**: Tailored AI features for computer vision, NLP, and multimodal applications
+- **Technical Consulting**: Strategic guidance on mobile AI architecture and implementation
+
+### Our Expertise
+
+With our background in mobile development (PhoneGap/Apache Cordova) and extensive OnDevice AI experience, we bring:
+- Deep knowledge of mobile AI frameworks and optimization techniques
+- Experience with real-world mobile AI implementations
+- Understanding of privacy and security requirements for OnDevice processing
+- Cross-platform development expertise
+
+## Ready to Help
+
+If you're building mobile AI features or need help with OnDevice Inference implementation, we're here to help. Our team combines deep mobile development expertise with cutting-edge AI knowledge to deliver production-ready solutions.
+
+**Contact us** to discuss your mobile AI project and how we can help bring your vision to life.
+
+---
+
+*Ready to integrate AI into your mobile app? [Contact us](/contact) to discuss your OnDevice Inference needs.*
 
