@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { X, Github, MessageSquare } from "lucide-react";
+import { X, Github, MessageSquare, Youtube } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -15,12 +15,16 @@ export function SiteFooter() {
               <span className="inline-block font-bold">Baseweight</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Empowering AI Everywhere
+              Mobile AI Services & OnDevice Consulting
             </p>
             <div className="mt-4 flex space-x-6">
               <Link href="https://twitter.com/baseweightai" className="text-muted-foreground hover:text-foreground">
                 <X className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
+              </Link>
+              <Link href="https://www.youtube.com/@BaseweightAI" className="text-muted-foreground hover:text-foreground">
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
               </Link>
               <Link href="https://github.com/baseweight" className="text-muted-foreground hover:text-foreground">
                 <Github className="h-5 w-5" />
@@ -33,16 +37,16 @@ export function SiteFooter() {
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold">Product</h3>
+            <h3 className="text-sm font-semibold">Services</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <Link href="#features" className="text-muted-foreground hover:text-foreground">
-                  Features
+                  Mobile AI Services
                 </Link>
               </li>
               <li>
-                <Link href="#security" className="text-muted-foreground hover:text-foreground">
-                  Security
+                <Link href="#services" className="text-muted-foreground hover:text-foreground">
+                  Our Expertise
                 </Link>
               </li>           
             </ul>

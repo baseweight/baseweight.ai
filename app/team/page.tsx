@@ -8,15 +8,9 @@ import { Users } from "lucide-react";
 const teamMembers = [
   {
     name: "Joe Bowser",
-    role: "Founder",
+    role: "Founder & Lead Engineer",
     image: "new_joe.jpg",
-    bio: "Ex-Adobe, and one of the creators of PhoneGap and Apache Cordova, Joe has both the mobile, web and AI experience to make Baseweight a reality." 
-  },
-  {
-    name: "Brad Barclay",
-    role: "Operations",
-    image: "Brad.jpg",
-    bio: "Brad has spent the last several years leading business development and go-to-market strategy for AI-first platforms across fintech, enterprise, and infrastructure. Before working in the AI and Technology space, he helped drive AUM and revenue growth across banking and fintech while supporting strategy, operations, and commercial execution." 
+    bio: "Ex-Adobe and creator of PhoneGap/Apache Cordova, Joe brings deep mobile development expertise to OnDevice AI. He specializes in cross-platform mobile AI implementation, model optimization, and custom inference engines for iOS and Android." 
   }
 ];
 
@@ -29,12 +23,16 @@ export default function Team() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               
+              <h2 className="text-base font-semibold leading-7 text-primary">Our Team</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Meet our team
+                Mobile AI Experts
+              </p>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                Experienced professionals specializing in OnDevice Inference and mobile AI implementation.
               </p>              
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-              <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+              <div className="flex justify-center">
                 {teamMembers.map((member) => (
                   <Card key={member.name} className="p-8 hover:shadow-lg transition-shadow">
                     <div className="flex flex-col items-center text-center">

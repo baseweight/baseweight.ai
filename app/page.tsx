@@ -5,16 +5,18 @@ import { Card } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { 
-  Cpu, 
+  Smartphone, 
   Shield, 
   Rocket,
   ChevronRight, 
   Github,
-  RefreshCw,
+  Zap,
   Gauge,
   CloudOff,
   Box,
-  Sparkles
+  Users,
+  Brain,
+  Settings
 } from "lucide-react";
 import Script from "next/script";
 
@@ -32,36 +34,30 @@ export default function Home() {
           <div className="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <div className="mb-8 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold leading-6 text-primary ring-1 ring-inset ring-primary/20">
-                <Sparkles className="mr-2 h-4 w-4" />
-                Coming Soon
+                <Brain className="mr-2 h-4 w-4" />
+                OnDevice Inference Experts
               </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-foreground">
-                Continuous AI Deployment,
-                <span className="text-primary block mt-2">Right on Your Device</span>
+                Mobile AI Services &
+                <span className="text-primary block mt-2">OnDevice Consulting</span>
               </h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-                Deploy and update AI models continuously to edge devices with Baseweight. 
-                Seamless versioning, instant rollouts, and complete privacy - all without cloud dependencies.
+                Expert OnDevice AI services and consulting for mobile applications. 
+                We help you integrate Visual Language Models and other AI capabilities directly into your iOS and Android apps.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-y-4">
-                <form 
-                  className="launchlist-form flex flex-col sm:flex-row gap-3 w-full max-w-md" 
-                  action="https://getlaunchlist.com/s/fu3a42" 
-                  method="POST"
-                >
-                  <input 
-                    name="email" 
-                    type="email" 
-                    placeholder="Your email"
-                    className="px-4 py-2 rounded-lg border border-input bg-background"
-                    required
-                  />
-                  <Button type="submit" size="lg" className="bg-primary">
-                    Get Early Access
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-primary">
+                    <Users className="mr-2 h-4 w-4" />
+                    Get Consulting Quote
                   </Button>
-                </form>
+                  <Button size="lg" variant="outline">
+                    <Smartphone className="mr-2 h-4 w-4" />
+                    View Our Work
+                  </Button>
+                </div>
                 <p className="text-sm text-muted-foreground">
-                  Join the waitlist for early access
+                  Expert OnDevice AI implementation services
                 </p>
               </div>
             </div>
@@ -72,35 +68,35 @@ export default function Home() {
         <div className="py-24 sm:py-32 bg-muted/50" id="features">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
-              <h2 className="text-base font-semibold leading-7 text-primary">Continuous Deployment</h2>
+              <h2 className="text-base font-semibold leading-7 text-primary">Our Services</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Deploy Local AI Models Like Modern Software
+                OnDevice AI Implementation
               </p>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Bring DevOps practices to AI deployment with our comprehensive platform for continuous model delivery and updates.
+                We specialize in integrating Visual Language Models and other AI capabilities directly into mobile applications with complete privacy and offline functionality.
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
               <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
                 <Card className="p-8 hover:shadow-lg transition-shadow">
-                  <RefreshCw className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Continuous Updates</h3>
+                  <Smartphone className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Mobile Implementation</h3>
                   <p className="text-muted-foreground">
-                    Deploy model updates seamlessly across your device fleet with version control and rollback capabilities.
+                    Custom AI integration for iOS and Android apps using Core ML, TensorFlow Lite, and ONNX Runtime.
                   </p>
                 </Card>
                 <Card className="p-8 hover:shadow-lg transition-shadow">
-                  <CloudOff className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Edge-Native</h3>
+                  <Zap className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Model Optimization</h3>
                   <p className="text-muted-foreground">
-                    Run and update models directly on edge devices without cloud dependencies or data transfers.
+                    Optimize your models for mobile performance with quantization, pruning, and platform-specific optimizations.
                   </p>
                 </Card>
                 <Card className="p-8 hover:shadow-lg transition-shadow">
-                  <Gauge className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Performance Monitoring</h3>
+                  <Settings className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Custom Solutions</h3>
                   <p className="text-muted-foreground">
-                    Track model performance and deployment metrics across your entire device network.
+                    Tailored AI solutions for computer vision, NLP, and multimodal applications on mobile devices.
                   </p>
                 </Card>
               </div>
@@ -108,38 +104,112 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Product Section */}
-        <div className="py-24 sm:py-32" id="product">
+        {/* Portfolio Section */}
+        <div className="py-24 sm:py-32 bg-muted/50" id="portfolio">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:text-center mb-16">
+              <h2 className="text-base font-semibold leading-7 text-primary">Our Work</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
+                Baseweight Snap
+              </p>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                The first app on the Google Play Store to run Visual Language Models OnDevice with complete privacy and offline functionality.
+              </p>
+            </div>
+            <div className="mx-auto max-w-5xl">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="relative h-64 lg:h-auto">
+                    <img
+                      src="/snap_screenshot.webp"
+                      alt="Baseweight Snap Screenshot"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/20 mb-4 w-fit">
+                      <Brain className="mr-2 h-4 w-4" />
+                      First on Google Play Store
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4">Baseweight Snap</h3>
+                    <p className="text-muted-foreground mb-6">
+                      A groundbreaking demonstration of Visual Language Models running entirely on mobile devices. 
+                      Baseweight Snap showcases advanced multimodal AI with complete privacy and offline capability.
+                    </p>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <Brain className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Visual Language Model</p>
+                          <p className="text-sm text-muted-foreground">Advanced AI understanding images and text</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CloudOff className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Complete Privacy</p>
+                          <p className="text-sm text-muted-foreground">All processing happens OnDevice</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Zap className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Offline Capable</p>
+                          <p className="text-sm text-muted-foreground">Works without internet connection</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://play.google.com/store/apps/details?id=ai.baseweight.baseweightsnap" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <Button size="lg" className="w-full sm:w-auto">
+                        <Smartphone className="mr-2 h-4 w-4" />
+                        Download on Google Play
+                      </Button>
+                    </a>
+                    <p className="text-xs text-muted-foreground mt-4">
+                      * Requires flagship Android device for optimal performance
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+        <div className="py-24 sm:py-32" id="services">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Built for Production
+                Our Expertise
               </h2>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Enterprise-ready features that scale with your needs
+                Deep experience in mobile AI technologies and frameworks
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
               <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
                 <Card className="p-8 hover:shadow-lg transition-shadow">
-                  <Box className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">SDK</h3>
+                  <Brain className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">AI Frameworks</h3>
                   <p className="text-muted-foreground">
-                    Cross-platform SDKs for iOS, Android, Desktop and Web.
+                    Core ML, TensorFlow Lite, ONNX Runtime, Executorch, and custom C++ implementations.
                   </p>
                 </Card>
                 <Card className="p-8 hover:shadow-lg transition-shadow">
                   <Shield className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Model Protection</h3>
+                  <h3 className="text-xl font-semibold mb-2">Privacy & Security</h3>
                   <p className="text-muted-foreground">
-                    Model encryption and secure inference, securing the investment in your AI models.
+                    On-device processing ensures user privacy while maintaining model security and IP protection.
                   </p>
                 </Card>
                 <Card className="p-8 hover:shadow-lg transition-shadow">
-                  <Rocket className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Distribution</h3>
+                  <Gauge className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Performance</h3>
                   <p className="text-muted-foreground">
-                    Automated deployment pipelines from Jupyter Notebooks and Hugging Face to Edge Devices.
+                    Optimized inference pipelines for real-time performance on mobile hardware constraints.
                   </p>
                 </Card>
               </div>
