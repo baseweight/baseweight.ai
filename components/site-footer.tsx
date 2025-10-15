@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { X, Github, MessageSquare } from "lucide-react";
+import { X, Github, MessageSquare, Youtube } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -21,6 +21,10 @@ export function SiteFooter() {
               <Link href="https://twitter.com/baseweightai" className="text-muted-foreground hover:text-foreground">
                 <X className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
+              </Link>
+              <Link href="https://www.youtube.com/@BaseweightAI" className="text-muted-foreground hover:text-foreground">
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
               </Link>
               <Link href="https://github.com/baseweight" className="text-muted-foreground hover:text-foreground">
                 <Github className="h-5 w-5" />

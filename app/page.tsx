@@ -105,34 +105,77 @@ export default function Home() {
         </div>
 
         {/* Portfolio Section */}
-        <div className="py-24 sm:py-32" id="portfolio">
+        <div className="py-24 sm:py-32 bg-muted/50" id="portfolio">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:text-center">
+            <div className="mx-auto max-w-2xl lg:text-center mb-16">
               <h2 className="text-base font-semibold leading-7 text-primary">Our Work</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                 Baseweight Snap
               </p>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Our current portfolio showcases a Visual Language Model running OnDevice with complete privacy and offline functionality.
+                The first app on the Google Play Store to run Visual Language Models OnDevice with complete privacy and offline functionality.
               </p>
             </div>
-            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-              <div className="flex justify-center">
-                <Card className="p-8 hover:shadow-lg transition-shadow max-w-md">
-                  <div className="flex flex-col items-center text-center">
-                    <Brain className="h-12 w-12 text-primary mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Baseweight Snap</h3>
-                    <p className="text-primary mt-1 mb-4">Visual Language Model OnDevice</p>
-                    <p className="text-muted-foreground mb-4">
-                      A demonstration of advanced multimodal AI running entirely on mobile devices with complete privacy and offline capability.
-                    </p>
-                    <Button variant="outline" size="sm">
-                      <Smartphone className="mr-2 h-4 w-4" />
-                      View Demo
-                    </Button>
+            <div className="mx-auto max-w-5xl">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="relative h-64 lg:h-auto">
+                    <img
+                      src="/snap_screenshot.webp"
+                      alt="Baseweight Snap Screenshot"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </Card>
-              </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/20 mb-4 w-fit">
+                      <Brain className="mr-2 h-4 w-4" />
+                      First on Google Play Store
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4">Baseweight Snap</h3>
+                    <p className="text-muted-foreground mb-6">
+                      A groundbreaking demonstration of Visual Language Models running entirely on mobile devices. 
+                      Baseweight Snap showcases advanced multimodal AI with complete privacy and offline capability.
+                    </p>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <Brain className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Visual Language Model</p>
+                          <p className="text-sm text-muted-foreground">Advanced AI understanding images and text</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CloudOff className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Complete Privacy</p>
+                          <p className="text-sm text-muted-foreground">All processing happens OnDevice</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Zap className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Offline Capable</p>
+                          <p className="text-sm text-muted-foreground">Works without internet connection</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://play.google.com/store/apps/details?id=ai.baseweight.baseweightsnap" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <Button size="lg" className="w-full sm:w-auto">
+                        <Smartphone className="mr-2 h-4 w-4" />
+                        Download on Google Play
+                      </Button>
+                    </a>
+                    <p className="text-xs text-muted-foreground mt-4">
+                      * Requires flagship Android device for optimal performance
+                    </p>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 ---
 title: "Baseweight: Now Focused on Mobile AI Services & Consulting"
-date: "2025-09-29"
+date: "2025-10-14"
 author: "Joe Bowser"
 coverImage: '/hello-world-cover.jpg'
 ---
