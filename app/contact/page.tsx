@@ -1,59 +1,10 @@
-"use client";
-
-import React, { FormEvent, useState } from 'react';
+import React from 'react';
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { Mail } from "lucide-react";
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    setLoading(true);
-    setSuccessMessage('');
-    setErrorMessage('');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSuccessMessage('Your message has been sent!');
-        setFormData({ name: '', email: '', subject: '', message: '' }); // Clear the form
-      } else {
-        setErrorMessage('There was an error sending your message. Please try again.');
-      }
-    } catch (error) {
-      setErrorMessage('An unexpected error occurred. Please try again.');
-    }
-
-    setLoading(false);
-  };
 
   return (
     <div className="relative flex min-h-screen flex-col">
@@ -71,78 +22,26 @@ const Contact: React.FC = () => {
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20">
-              <Card className="p-8">
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
+              <Card className="p-12 text-center">
+                <div className="flex flex-col items-center space-y-6">
+                  <div className="rounded-full bg-primary/10 p-6">
+                    <Mail className="h-12 w-12 text-primary" />
                   </div>
-
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
+                    <h3 className="text-2xl font-semibold text-foreground">
+                      Let's Talk
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Reach out to discuss your mobile AI project
+                    </p>
                   </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                      Subject
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      className="min-h-[150px]"
-                    />
-                  </div>
-
-                  {successMessage && (
-                    <div className="p-4 text-sm text-green-700 bg-green-100 rounded-md">
-                      {successMessage}
-                    </div>
-                  )}
-
-                  {errorMessage && (
-                    <div className="p-4 text-sm text-red-700 bg-red-100 rounded-md">
-                      {errorMessage}
-                    </div>
-                  )}
-
-                  <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? 'Sending...' : 'Send Message'}
-                  </Button>
-                </form>
+                  <a
+                    href="mailto:info@baseweight.ai"
+                    className="text-3xl font-bold text-primary hover:text-primary/80 transition-colors"
+                  >
+                    info@baseweight.ai
+                  </a>
+                </div>
               </Card>
             </div>
           </div>

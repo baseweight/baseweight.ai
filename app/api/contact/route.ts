@@ -12,14 +12,15 @@ interface ContactForm {
 }
 
 export async function POST(req: NextRequest) {
-
     const body = await req.json();
     const { name, email, subject, message }: ContactForm = body;
 
-    var res = NextResponse.next();
+    // Check if API key is configured
+    if (!process.env.SENDGRID_API_KEY) {
+      return NextResponse.json({ error: 'SendGrid API key not configured' }, { status: 500 });
+    }
 
     try {
-
       await sendgrid.send({
         to: 'info@baseweight.ai', // Replace with your email address
         from: 'info@baseweight.ai', // Must match the verified sender from SendGrid
@@ -31,10 +32,15 @@ export async function POST(req: NextRequest) {
         `,
       });
 
-      return NextResponse.json({status: 200});
-    } catch (error) {
-      console.error(error);
-      return NextResponse.json({ error: 'Email could not be sent' }, {status: 500});
-    }
+      return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+    } catch (error: any) {
+      console.error('SendGrid Error:', error);
+      if (error.response) {
+        console.error('SendGrid Response:', error.response.body);
+      }
 
+      // Return more specific error for debugging
+      const errorMessage = error.response?.body?.errors?.[0]?.message || error.message || 'Email could not be sent';
+      return NextResponse.json({ error: errorMessage }, { status: 500 });
+    }
 }
