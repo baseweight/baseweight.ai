@@ -110,30 +110,31 @@ export default function Home() {
             <div className="mx-auto max-w-2xl lg:text-center mb-16">
               <h2 className="text-base font-semibold leading-7 text-primary">Our Work</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                Baseweight Snap
+                Products
               </p>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                The first app on the Google Play Store to run Visual Language Models OnDevice with complete privacy and offline functionality.
+                Innovative multimodal AI applications showcasing our expertise in OnDevice inference and developer tools.
               </p>
             </div>
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-7xl space-y-12">
+              {/* Baseweight Snap */}
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative h-64 lg:h-auto">
+                  <div className="relative h-64 lg:h-96 flex items-center justify-center bg-muted/30">
                     <img
                       src="/snap_screenshot.webp"
                       alt="Baseweight Snap Screenshot"
-                      className="w-full h-full object-cover"
+                      className="h-full w-auto object-contain"
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/20 mb-4 w-fit">
-                      <Brain className="mr-2 h-4 w-4" />
-                      First on Google Play Store
+                      <Smartphone className="mr-2 h-4 w-4" />
+                      Mobile Application
                     </div>
                     <h3 className="text-2xl font-bold mb-4">Baseweight Snap</h3>
                     <p className="text-muted-foreground mb-6">
-                      A groundbreaking demonstration of Visual Language Models running entirely on mobile devices. 
+                      The first app on the Google Play Store to run Visual Language Models OnDevice.
                       Baseweight Snap showcases advanced multimodal AI with complete privacy and offline capability.
                     </p>
                     <div className="space-y-4 mb-6">
@@ -159,9 +160,9 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <a 
-                      href="https://play.google.com/store/apps/details?id=ai.baseweight.baseweightsnap" 
-                      target="_blank" 
+                    <a
+                      href="https://play.google.com/store/apps/details?id=ai.baseweight.baseweightsnap"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block"
                     >
@@ -172,6 +173,65 @@ export default function Home() {
                     </a>
                     <p className="text-xs text-muted-foreground mt-4">
                       * Requires flagship Android device for optimal performance
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Baseweight Canvas */}
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="relative h-64 lg:h-auto">
+                    <img
+                      src="/canvas_screenshot.png"
+                      alt="Baseweight Canvas Screenshot"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/20 mb-4 w-fit">
+                      <Box className="mr-2 h-4 w-4" />
+                      Desktop Application
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4">Baseweight Canvas</h3>
+                    <p className="text-muted-foreground mb-6">
+                      A desktop multimodal application designed for developers to interact with images and audio using Visual Language Models.
+                      Vision and audio first, unlike traditional LLM runners.
+                    </p>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <Brain className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Multimodal AI</p>
+                          <p className="text-sm text-muted-foreground">Image and audio processing capabilities</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CloudOff className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Local Processing</p>
+                          <p className="text-sm text-muted-foreground">Run models on your machine</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Settings className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Cross-Platform</p>
+                          <p className="text-sm text-muted-foreground">Available for Windows, Mac, and Linux</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a
+                      href="/products/canvas"
+                      className="inline-block"
+                    >
+                      <Button size="lg" className="w-full sm:w-auto">
+                        <ChevronRight className="mr-2 h-4 w-4" />
+                        Learn More
+                      </Button>
+                    </a>
+                    <p className="text-xs text-muted-foreground mt-4">
+                      * Pre-release version available now
                     </p>
                   </div>
                 </div>
