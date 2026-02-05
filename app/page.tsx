@@ -160,19 +160,32 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <a
-                      href="https://play.google.com/store/apps/details?id=ai.baseweight.baseweightsnap"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block"
-                    >
-                      <Button size="lg" className="w-full sm:w-auto">
-                        <Smartphone className="mr-2 h-4 w-4" />
-                        Download on Google Play
-                      </Button>
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a
+                        href="https://apps.apple.com/us/app/baseweight-snap/id6758553453"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                      >
+                        <Button size="lg" className="w-full sm:w-auto">
+                          <Smartphone className="mr-2 h-4 w-4" />
+                          Download on App Store
+                        </Button>
+                      </a>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=ai.baseweight.baseweightsnap"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                      >
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                          <Smartphone className="mr-2 h-4 w-4" />
+                          Download on Google Play
+                        </Button>
+                      </a>
+                    </div>
                     <p className="text-xs text-muted-foreground mt-4">
-                      * Requires flagship Android device for optimal performance
+                      * Requires flagship device for optimal performance
                     </p>
                   </div>
                 </div>
