@@ -5,10 +5,10 @@ import { Card } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { 
-  Smartphone, 
-  Shield, 
+  Smartphone,
+  Shield,
   Rocket,
-  ChevronRight, 
+  ChevronRight,
   Github,
   Zap,
   Gauge,
@@ -16,7 +16,9 @@ import {
   Box,
   Users,
   Brain,
-  Settings
+  Settings,
+  Eye,
+  Lock
 } from "lucide-react";
 import Script from "next/script";
 
@@ -245,6 +247,77 @@ export default function Home() {
                     </a>
                     <p className="text-xs text-muted-foreground mt-4">
                       * Pre-release version available now
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* SideEye */}
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="relative h-64 lg:h-auto flex items-center justify-center bg-muted/30">
+                    <div className="flex flex-col items-center gap-4 p-8">
+                      <Eye className="h-24 w-24 text-primary" />
+                      <p className="text-2xl font-bold text-primary">SideEye</p>
+                    </div>
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/20 mb-4 w-fit">
+                      <Smartphone className="mr-2 h-4 w-4" />
+                      Android Application
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4">SideEye</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Smart photo management with privacy at its core. Uses on-device AI to scan your gallery for sensitive content
+                      and helps you delete, keep, or securely vault flagged images.
+                    </p>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <Brain className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">NPU-Accelerated AI</p>
+                          <p className="text-sm text-muted-foreground">OmniNeural-4B VLM via Nexa SDK on Qualcomm NPU</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Lock className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Encrypted Vault</p>
+                          <p className="text-sm text-muted-foreground">AES-256-GCM storage with PIN and biometric auth</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CloudOff className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-semibold">Completely Offline</p>
+                          <p className="text-sm text-muted-foreground">All processing on-device, photos never leave your phone</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a
+                        href="/products/sideeye"
+                        className="inline-block"
+                      >
+                        <Button size="lg" className="w-full sm:w-auto">
+                          <ChevronRight className="mr-2 h-4 w-4" />
+                          Learn More
+                        </Button>
+                      </a>
+                      <a
+                        href="https://github.com/baseweight/SideEye"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                      >
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                          <Github className="mr-2 h-4 w-4" />
+                          View on GitHub
+                        </Button>
+                      </a>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-4">
+                      * Requires Qualcomm device with NPU for Smart Scan
                     </p>
                   </div>
                 </div>
