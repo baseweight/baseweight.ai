@@ -255,11 +255,12 @@ export default function Home() {
               {/* SideEye */}
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative h-64 lg:h-auto flex items-center justify-center bg-muted/30">
-                    <div className="flex flex-col items-center gap-4 p-8">
-                      <Eye className="h-24 w-24 text-primary" />
-                      <p className="text-2xl font-bold text-primary">SideEye</p>
-                    </div>
+                  <div className="relative h-64 lg:h-96 flex items-center justify-center bg-muted/30">
+                    <img
+                      src="/sideeye_screenshot.png"
+                      alt="SideEye Screenshot"
+                      className="h-full w-auto object-contain"
+                    />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/20 mb-4 w-fit">

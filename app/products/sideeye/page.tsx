@@ -54,8 +54,21 @@ export default function SideEyePage() {
           </div>
         </div>
 
+        {/* Screenshot */}
+        <div className="py-12 bg-muted/50">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src="/sideeye_screenshot.png"
+                alt="SideEye - AI-powered photo privacy management showing Smart Scan results"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Features Section */}
-        <div className="py-24 sm:py-32 bg-muted/50">
+        <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center mb-16">
               <h2 className="text-base font-semibold leading-7 text-primary">Features</h2>
