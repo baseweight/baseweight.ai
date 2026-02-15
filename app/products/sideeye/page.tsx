@@ -14,6 +14,7 @@ import {
   Zap,
   ChevronLeft,
   Github,
+  BookOpen,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -47,6 +48,12 @@ export default function SideEyePage() {
                   <Button size="lg" className="bg-primary">
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
+                  </Button>
+                </Link>
+                <Link href="/blog/sideeye">
+                  <Button size="lg" variant="outline">
+                    <BookOpen className="mr-2 h-4 w-4" />
+                    Read the Blog Post
                   </Button>
                 </Link>
               </div>
