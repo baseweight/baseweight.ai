@@ -39,4 +39,3 @@ Baseweight SideEye is open source on GitHub now, and you can sideload the debug 
 **📬 Or email us directly** at hello@baseweight.ai  
 **💬 Join the conversation** on [Discord](https://discord.gg/bKa3XgXxFz)
 
-We’re going to be at **Web Summit Vancouver** on Thursday, May 29th in the Web Summit Alpha area — if you're there, come by and say hi.
